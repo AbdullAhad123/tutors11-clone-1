@@ -14,8 +14,7 @@
     <meta name="keywords" content="{{ app(\App\Settings\KeywordsSettings::class)->keywords['home_keywords'] }}">
     <title>{{ app(\App\Settings\KeywordsSettings::class)->title['home_title'] }}</title>
     <meta name="msvalidate.01" content="6842DFA93B7F9C2AD10D216BC8C4754C">
-    <meta name="description"
-        content="{{ app(\App\Settings\KeywordsSettings::class)->description['home_description'] }}">
+    <meta name="description" content="{{ app(\App\Settings\KeywordsSettings::class)->description['home_description'] }}">
     <link rel="canonical" href="{{ url()->current() }}">
     <link rel="alternate" href="{{ url()->current() }}" hreflang="en-gb">
     <link rel="icon" href="{{ url('storage/' . app(\App\Settings\SiteSettings::class)->favicon_path) }}">
@@ -24,28 +23,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://www.google-analytics.com">
     <link rel="preload" href="{{ url('Frontend_css/home.css') }}" as="style">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-        as="style" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-        crossorigin="anonymous">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" as="style" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500&display=swap"
-        as="style" onload='this.onload=null,this.rel="stylesheet"'>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500&display=swap" as="style" onload='this.onload=null,this.rel="stylesheet"'>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500&display=swap" rel="stylesheet">
     @include('components.google-tags')
     <link rel="stylesheet" href="{{ asset('Frontend_css/home.css') }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
     <link rel="preload" href="../images/header_bg_vectors.webp" as="image">
     <meta property="og:title" content="Top Eleven Plus Tutors in the UK - TutorsElevenPlus" />
-    <meta property="og:description"
-        content="Looking for expert Eleven Plus tutors? Our online platform provides comprehensive study materials, practice sets, and strategies to help students excel in the 11+ exams." />
+    <meta property="og:description" content="Looking for expert Eleven Plus tutors? Our online platform provides comprehensive study materials, practice sets, and strategies to help students excel in the 11+ exams." />
     <meta property="og:image" content="{{ url('images/opengraph_display_image.jpg') }}" />
     <meta property="og:url" content="https://tutorselevenplus.co.uk" />
     <meta property="og:type" content="website" />
@@ -54,116 +44,113 @@
     <link rel="alternate" href="https://tutorselevenplus.co.uk/ " hreflang="x-default">
     <link rel="alternate" href="https://tutorselevenplus.co.uk/ " hreflang="en-UK">
     <style>
-        .header_section {
-            min-height: 600px;
-            max-height: fit-content;
-            width: auto;
-            background: url('../images/header_bg_vectors.png') center no-repeat, radial-gradient(#d860ce, #8f0283);
-            background-size: cover
-        }
+      .header_section {
+        min-height: 600px;
+        max-height: fit-content;
+        width: auto;
+        background: url('../images/header_bg_vectors.png') center no-repeat, radial-gradient(#d860ce, #8f0283);
+        background-size: cover
+      }
 
-        .svg-image {
-            margin-top: -1px
-        }
+      .svg-image {
+        margin-top: -1px
+      }
 
-        .faq_question_section {
-            height: auto;
-            width: auto
-        }
+      .faq_question_section {
+        height: auto;
+        width: auto
+      }
 
-        .answer_parent {
-            display: none
-        }
+      .answer_parent {
+        display: none
+      }
 
-        .service_child1 {
-            background: #bbd1f4
-        }
+      .service_child1 {
+        background: #bbd1f4
+      }
 
-        .service_child2 {
-            background: #ffe5c2
-        }
+      .service_child2 {
+        background: #ffe5c2
+      }
 
-        .service_child3 {
-            background: #d2cdc7
-        }
+      .service_child3 {
+        background: #d2cdc7
+      }
 
-        .service_child4 {
-            background: #ffc747
-        }
+      .service_child4 {
+        background: #ffc747
+      }
 
-        .header_heading {
-            line-height: 1.6
-        }
+      .header_heading {
+        line-height: 1.6
+      }
 
-        .header_image {
-            filter: contrast(1.1);
-            max-width: 600px !important
-        }
+      .header_image {
+        filter: contrast(1.1);
+        max-width: 600px !important
+      }
 
-        .learning-image {
-            box-shadow: (1px 1px 0 #00000035)
-        }
+      .learning-image {
+        box-shadow: (1px 1px 0 #00000035)
+      }
 
-        .faq_question {
-            cursor: pointer
-        }
+      .faq_question {
+        cursor: pointer
+      }
 
-        .progress,
-        .progress-bar {
-            height: .5rem
-        }
+      .progress,
+      .progress-bar {
+        height: .5rem
+      }
 
-        .team-card {
-            width: 12rem
-        }
+      .team-card {
+        width: 12rem
+      }
 
-        .services_card {
-            height: auto
-        }
+      .services_card {
+        height: auto
+      }
 
-        .services_image {
-            height: 160px;
-            width: auto
-        }
+      .services_image {
+        height: 160px;
+        width: auto
+      }
 
-        .services_image img {
-            position: absolute;
-            left: 50%;
-            right: 50%;
-            top: -75px;
-            transform: translateX(-50%)
-        }
+      .services_image img {
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        top: -75px;
+        transform: translateX(-50%)
+      }
 
-        .testimonial_text {
-            height: 260px;
-            overflow-y: auto;
-            line-height: 1.9rem !important
-        }
+      .testimonial_text {
+        height: 260px;
+        overflow-y: auto;
+        line-height: 1.9rem !important
+      }
 
-        .testimonial_text::-webkit-scrollbar {
-            width: 5px !important
-        }
+      .testimonial_text::-webkit-scrollbar {
+        width: 5px !important
+      }
 
-        .category-text {
-            color: var(--primary)
-        }
+      .category-text {
+        color: var(--primary)
+      }
 
-        .responsive_image {
-            max-width: 500px !important
-        }
-    </style>
-</head>
-<style>
-    .ratingCard {
+      .responsive_image {
+        max-width: 500px !important
+      }
+      .ratingCard {
         height: auto;
         width: auto;
         background-color: #fff;
         padding: 0.75rem;
         border-radius: 8px;
         box-shadow: 0px 3px 5px 0 #00000042;
-    }
-</style>
-
+      }
+    </style>
+</head>
 <body>
     <script type="application/ld+json">
       {
@@ -203,204 +190,185 @@
     <section class="header">@include('components.home-navbar') 
       @if (app(\App\Settings\HomepageSettings::class)->enable_hero)
         <header class="header_section">
-            <div class="d-flex justify-content-center align-items-center col-lg-11 col-md-12 col-sm-12 col-12 mx-auto pt-lg-4 pt-md-3 pt-0">
-                <div class="row align-items-center m-0 pt-4">
-                    <div
-                        class="align-items-center col-12 col-lg-6 col-md-10 col-sm-12 header_text_side justify-content-center mt-5 mt-lg-0 mt-md-5 mt-sm-5 my-2 p-3 py-lg-0">
-                        <p class="fs-4 fw-normal mb-0 mt-4 text-white">Eleven Plus Tutors</p>
-                        <h1 class="display-5 fw-medium text-white">
-                            {{ app(\App\Settings\HeroSettings::class)->title }}</h1>
-                        <p class="fs-5 fw-light header_heading my-2 text-white">
-                            {{ app(\App\Settings\HeroSettings::class)->subtitle }}</p>
-                        <div class="subscribe_form my-3">
-                            <div class="newletter_form"><input class="form-control text-dark px-3"
-                                    id="subscribeEmailbtn" placeholder="Enter email to subscribe..."><button
-                                    id="submitSubscribe" aria-label="Subscribe Us"><i
-                                        class="fab fa-telegram-plane"></i><span
-                                        class="ms-1 text-white d-none spinner-border spinner-border-sm"
-                                        aria-hidden="true"></span></button></div>
-                            <p class="email_error d-none text-warning my-1"></p>
-                        </div>
-                        <div class="align-items-center d-flex flex-wrap gap-2 my-2"><a
-                                class="ratingCard align-items-center d-inline-flex gap-2 my-2 text-light"
-                                href="{{ route('review') }}"><img src="{{ url('images/google_review.webp') }}"
-                                    width="80" height="auto" alt="google reviews logo">
-                                <div>
-                                    <p class="fw-light m-0 text-secondary">We are rated</p>
-                                    <p class="fw-medium m-0 text-dark">5/5 on Google</p>
-                                </div>
-                            </a><a class="ratingCard align-items-center d-inline-flex gap-2 my-2 text-light"
-                                href="{{ route('review') }}"><img
-                                    src="{{ url('images/trustpilot_review.webp') }}" width="80"
-                                    height="auto" alt="trustpilot logo">
-                                <div>
-                                    <p class="fw-light m-0 text-secondary">We are rated</p>
-                                    <p class="fw-medium m-0 text-dark">5/5 on Trustpilot</p>
-                                </div>
-                            </a></div>
-                    </div>
-                    <div class="col-lg-6 mt-lg-5 text-center"><img
-                            src="{{ url('images/index_header_image.webp') }}"
-                            alt="{{ app(\App\Settings\SiteSettings::class)->app_name }} header image"
-                            class="header_image" height="100%" width="100%"></div>
+          <div class="d-flex justify-content-center align-items-center col-lg-11 col-md-12 col-sm-12 col-12 mx-auto pt-lg-4 pt-md-3 pt-0">
+            <div class="row align-items-center m-0 pt-4">
+              <div class="align-items-center col-12 col-lg-6 col-md-10 col-sm-12 header_text_side justify-content-center mt-5 mt-lg-0 mt-md-5 mt-sm-5 my-2 p-3 py-lg-0">
+                <p class="fs-5 fw-normal mb-0 mt-4 text-white text-uppercase">Eleven Plus Tutors</p>
+                {{-- <h1 class="display-5 fw-medium text-white">{{ app(\App\Settings\HeroSettings::class)->title }}</h1>
+                <p class="fs-5 fw-light header_heading my-2 text-white">{{ app(\App\Settings\HeroSettings::class)->subtitle }}</p> --}}
+                <h1 class="display-5 fw-medium text-white">Leading 11+ Academy in United Kingdom</h1>
+                <p class="fs-5 fw-light header_heading my-2 text-white">At TutorsElevenPlus, We help students to shine in their 11+ journey with the right guidance, learning and confidence. Get started and excel your next 11+ exams!</p>
+                <div class="subscribe_form my-3">
+                  <div class="newletter_form">
+                    <input class="form-control text-dark px-3" id="subscribeEmailbtn" placeholder="Enter email to subscribe...">
+                    <button id="submitSubscribe" aria-label="Subscribe Us">
+                      <i class="fab fa-telegram-plane"></i>
+                      <span class="ms-1 text-white d-none spinner-border spinner-border-sm" aria-hidden="true"></span>
+                    </button>
+                  </div>
+                  <p class="email_error d-none text-warning my-1"></p>
                 </div>
+                <div class="align-items-center d-flex flex-wrap gap-2 my-2">
+                  <a class="ratingCard align-items-center d-inline-flex gap-2 my-2 text-light" href="{{ route('review') }}">
+                    <img src="{{ url('images/google_review.webp') }}" width="80" height="auto" alt="google reviews logo" />
+                    <div>
+                      <p class="fw-light m-0 text-secondary">We are rated</p>
+                      <p class="fw-medium m-0 text-dark">5/5 on Google</p>
+                    </div>
+                  </a>
+                  <a class="ratingCard align-items-center d-inline-flex gap-2 my-2 text-light" href="{{ route('review') }}">
+                    <img src="{{ url('images/trustpilot_review.webp') }}" width="80" height="auto" alt="trustpilot logo" />
+                    <div>
+                      <p class="fw-light m-0 text-secondary">We are rated</p>
+                      <p class="fw-medium m-0 text-dark">5/5 on Trustpilot</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="col-lg-6 mt-lg-5 text-center">
+                <img src="{{ url('images/index_header_image.webp') }}" alt="{{ app(\App\Settings\SiteSettings::class)->app_name }} header image" class="header_image" height="100%" width="100%">
+              </div>
             </div>
-            <div class="row align-items-center m-0 p-0 py-2 subject_cards_container container mx-auto">
-                <div class="col-lg-3 col-md-5 col-sm-6 col-6 my-2 p-lg-3 p-md-3 p-sm-2 p-1"><a
-                        href="{{ route('subject_english') }}" class="text-decoration-none text-muted">
-                        <div class="subject_card p-2 rounded-4 text-center subject_odd_card">
-                            <div class="subject_details">
-                                <div
-                                    class="align-items-center d-flex justify-content-center rounded-circle small subject_badge_3d text-white">
-                                    1</div><span class="h5 m-0 ms-2 text-uppercase">english</span>
-                            </div><img src="{{ url('images/subject_english.webp') }}" width="215"
-                                height="252" class="img-fluid" alt="english">
-                        </div>
-                    </a></div>
-                <div class="col-lg-3 col-md-5 col-sm-6 col-6 my-2 p-lg-3 p-md-3 p-sm-2 p-1"><a
-                        href="{{ route('subject_maths') }}" class="text-decoration-none text-muted">
-                        <div class="subject_card p-2 rounded-4 text-center subject_even_card">
-                            <div class="subject_details">
-                                <div
-                                    class="align-items-center d-flex justify-content-center rounded-circle small subject_badge_3d text-white">
-                                    2</div><span class="h5 m-0 ms-2 text-uppercase">maths</span>
-                            </div><img src="{{ url('images/subject_maths.webp') }}" width="215"
-                                height="252" class="img-fluid" alt="maths">
-                        </div>
-                    </a></div>
-                <div class="col-lg-3 col-md-5 col-sm-6 col-6 my-2 p-lg-3 p-md-3 p-sm-2 p-1"><a
-                        href="{{ route('subject_verbal_reasoning') }}" class="text-decoration-none text-muted">
-                        <div class="subject_card p-2 rounded-4 text-center subject_odd_card">
-                            <div class="subject_details">
-                                <div
-                                    class="align-items-center d-flex justify-content-center rounded-circle small subject_badge_3d text-white">
-                                    3</div><span class="h5 m-0 ms-2 text-uppercase">verbal</span>
-                            </div><img src="{{ url('images/verbal_reasoning_image.webp') }}" width="215"
-                                height="252" class="img-fluid" alt="Verbal reasoning">
-                        </div>
-                    </a></div>
-                <div class="col-lg-3 col-md-5 col-sm-6 col-6 my-2 p-lg-3 p-md-3 p-sm-2 p-1"><a
-                        href="{{ route('subject_non_verbal_reasoning') }}"
-                        class="text-decoration-none text-muted">
-                        <div class="subject_card p-2 rounded-4 text-center subject_even_card">
-                            <div class="subject_details">
-                                <div
-                                    class="align-items-center d-flex justify-content-center rounded-circle small subject_badge_3d text-white">
-                                    4</div><span class="h5 m-0 ms-2 text-uppercase">non-verbal</span>
-                            </div><img src="{{ url('images/subject_nvr.webp') }}" width="215" height="252"
-                                class="img-fluid" alt="non-Verbal reasoning">
-                        </div>
-                    </a></div>
-            </div>
+          </div>
+          <div class="row align-items-center m-0 p-0 py-2 subject_cards_container container mx-auto">
+              <div class="col-lg-3 col-md-5 col-sm-6 col-6 my-2 p-lg-3 p-md-3 p-sm-2 p-1">
+                <a href="{{ route('subject_english') }}" class="text-decoration-none text-muted">
+                  <div class="subject_card p-2 rounded-4 text-center subject_odd_card">
+                    <div class="subject_details">
+                      <div class="align-items-center d-flex justify-content-center rounded-circle small subject_badge_3d text-white">1</div>
+                      <span class="h5 m-0 ms-2 text-uppercase">english</span>
+                    </div>
+                    <img src="{{ url('images/subject_english.webp') }}" width="215" height="252" class="img-fluid" alt="english">
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-5 col-sm-6 col-6 my-2 p-lg-3 p-md-3 p-sm-2 p-1">
+                <a href="{{ route('subject_maths') }}" class="text-decoration-none text-muted">
+                  <div class="subject_card p-2 rounded-4 text-center subject_even_card">
+                    <div class="subject_details">
+                      <div class="align-items-center d-flex justify-content-center rounded-circle small subject_badge_3d text-white">2</div>
+                      <span class="h5 m-0 ms-2 text-uppercase">maths</span>
+                    </div>
+                    <img src="{{ url('images/subject_maths.webp') }}" width="215" height="252" class="img-fluid" alt="maths">
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-5 col-sm-6 col-6 my-2 p-lg-3 p-md-3 p-sm-2 p-1">
+                <a href="{{ route('subject_verbal_reasoning') }}" class="text-decoration-none text-muted">
+                  <div class="subject_card p-2 rounded-4 text-center subject_odd_card">
+                    <div class="subject_details">
+                      <div class="align-items-center d-flex justify-content-center rounded-circle small subject_badge_3d text-white">3</div>
+                      <span class="h5 m-0 ms-2 text-uppercase">verbal</span>
+                    </div>
+                    <img src="{{ url('images/verbal_reasoning_image.webp') }}" width="215" height="252" class="img-fluid" alt="Verbal reasoning">
+                  </div>
+                </a>
+              </div>
+              <div class="col-lg-3 col-md-5 col-sm-6 col-6 my-2 p-lg-3 p-md-3 p-sm-2 p-1">
+                <a href="{{ route('subject_non_verbal_reasoning') }}" class="text-decoration-none text-muted">
+                  <div class="subject_card p-2 rounded-4 text-center subject_even_card">
+                    <div class="subject_details">
+                      <div class="align-items-center d-flex justify-content-center rounded-circle small subject_badge_3d text-white">4</div>
+                      <span class="h5 m-0 ms-2 text-uppercase">non-verbal</span>
+                    </div>
+                    <img src="{{ url('images/subject_nvr.webp') }}" width="215" height="252" class="img-fluid" alt="non-Verbal reasoning">
+                  </div>
+                </a>
+              </div>
+          </div>
         </header>
-        <svg class="svg-image" viewBox="0 0 1920 200" xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink">
-            <path fill="#0c76ed" d="M 0 0 C 485.5 0 485.5 110 971 110 L 971 110 L 971 0 L 0 0 Z" stroke-width="0">
-            </path>
-            <path fill="#0c76ed" d="M 970 110 C 1445 110 1445 0 1920 0 L 1920 0 L 1920 0 L 970 0 Z"
-                stroke-width="0"></path>
+        <svg class="svg-image" viewBox="0 0 1920 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <path fill="#0c76ed" d="M 0 0 C 485.5 0 485.5 110 971 110 L 971 110 L 971 0 L 0 0 Z" stroke-width="0"></path>
+          <path fill="#0c76ed" d="M 970 110 C 1445 110 1445 0 1920 0 L 1920 0 L 1920 0 L 970 0 Z" stroke-width="0"></path>
         </svg>
       @endif
     </section>
     @if (app(\App\Settings\HomepageSettings::class)->enable_features)
-        <section class="about_section fixed_width row align-items-center mx-auto col-lg-11 col-md-12">
-          <div class="col-lg-4 col-md-6 col-sm-12 col-10 mx-auto text-center">
-            <img loading="lazy" src="images/about_boy_image.webp" alt="about us mockup" class="learning-image img-fluid" width="373" height="373">
-          </div>
-          <div class="col-lg-8 col-md-6 col-sm-12 col-12">
-              <p class="fs-6 fw-medium mb-0 text-uppercase text_primary">About{{ app(\App\Settings\SiteSettings::class)->app_name }}</p>
-              <h2 class="display-5 fw-medium mb-3">Meet the 11 Plus Online Tutors Behind Your 11+ Success</h2>
-              <p class="paragraph_font fw-light">At {{ app(\App\Settings\SiteSettings::class)->app_name }}, we
-                proudly spearhead online education in the United Kingdom, committed to nurturing 11+ students
-                towards excellence with the enthusiastic collaboration of parents and highly qualified educators.
-                Our platform offers a diverse range of question sets, tests, and exams, delivering swift and
-                efficient learning through 11 plus tuition and 11 plus online tuition. Ensuring your child's journey
-                to success is our top priority.
+      <section class="about_section fixed_width row align-items-center mx-auto col-lg-11 col-md-12">
+        <div class="col-lg-4 col-md-6 col-sm-12 col-10 mx-auto text-center">
+          <img loading="lazy" src="images/about_boy_image.webp" alt="about us mockup" class="learning-image img-fluid" width="373" height="373">
+        </div>
+        <div class="col-lg-8 col-md-6 col-sm-12 col-12">
+          <p class="fs-6 fw-medium mb-0 text-uppercase text_primary">About{{ app(\App\Settings\SiteSettings::class)->app_name }}</p>
+          <h2 class="display-5 fw-medium mb-3">Meet the 11 Plus Online Tutors Behind Your 11+ Success</h2>
+          <p class="paragraph_font fw-light">At {{ app(\App\Settings\SiteSettings::class)->app_name }}, we
+            proudly spearhead online education in the United Kingdom, committed to nurturing 11+ students
+            towards excellence with the enthusiastic collaboration of parents and highly qualified educators.
+            Our platform offers a diverse range of question sets, tests, and exams, delivering swift and
+            efficient learning through 11 plus tuition and 11 plus online tuition. Ensuring your child's journey
+            to success is our top priority.
+          </p>
+          <div class="align-items-center d-flex flex-wrap justify-content-between py-2">
+              <p class="paragraph_font m-0 ms-2 d-flex align-items-center m-2"><i
+                      class="fa-solid fa-circle-check text_secondary paragraph_font me-2"></i>Question Sets</p>
+              <p class="paragraph_font ms-2 d-flex align-items-center m-2"><i
+                      class="fa-solid fa-circle-check text_secondary paragraph_font me-2"></i>Learning Journeys
               </p>
-              <div class="align-items-center d-flex flex-wrap justify-content-between py-2">
-                  <p class="paragraph_font m-0 ms-2 d-flex align-items-center m-2"><i
-                          class="fa-solid fa-circle-check text_secondary paragraph_font me-2"></i>Question Sets</p>
-                  <p class="paragraph_font ms-2 d-flex align-items-center m-2"><i
-                          class="fa-solid fa-circle-check text_secondary paragraph_font me-2"></i>Learning Journeys
-                  </p>
-                  <p class="paragraph_font ms-2 d-flex align-items-center m-2"><i
-                          class="fa-solid fa-circle-check text_secondary paragraph_font me-2"></i>Live Exams & Tests
-                  </p>
-              </div>
-              <a href="/about" aria-label="About Us" class="border-2 secondary_btn p-2 px-4 rounded-2 rounded-pill text-start my-3">About us</a>
+              <p class="paragraph_font ms-2 d-flex align-items-center m-2"><i
+                      class="fa-solid fa-circle-check text_secondary paragraph_font me-2"></i>Live Exams & Tests
+              </p>
           </div>
-        </section>
+          <a href="/about" aria-label="About Us" class="border-2 secondary_btn p-2 px-4 rounded-2 rounded-pill text-start my-3">About us</a>
+        </div>
+      </section>
     @endif
     @if (app(\App\Settings\HomepageSettings::class)->enable_features)
       <section class="service_section p-2 fixed_width">
-          <h2 class="display-5 text-center fw-medium my-4 section_heading mb-lg-4">Our Features<div class="heading_separator mx-auto rounded-pill mb-4"></div></h2>
-          <div class="row m-0 services_container py-lg-5 py-md-4 py-3 p-2 justify-content-center">
-            <div class="col-lg-3 col-md-5 col-sm-6 col-12 p-lg-2 p-md-2 p-1 mb-lg-0 mb-5">
-                <div class="services_card service_child1 p-3 py-4 rounded-5 position-relative h-100">
-                    <div class="services_image position-relative mx-auto"><img loading="lazy"
-                            src="{{ url('images/top_quality_question_guy.webp') }}" height="220"
-                            width="220" alt="{{ app(\App\Settings\FeatureSettings::class)->feature1[0] }}">
-                    </div>
-                    <div class="services-details d-grid">
-                        <h3 class="text-center my-1 text-uppercase h4">
-                            {{ app(\App\Settings\FeatureSettings::class)->feature1[0] }}</h2>
-                            <p class="my-2 text-center">
-                                {{ app(\App\Settings\FeatureSettings::class)->feature1[1] }}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-5 col-sm-6 col-12 p-lg-2 p-md-2 p-1 mb-lg-0 mb-5">
-                <div class="services_card service_child2 p-3 py-4 rounded-5 position-relative h-100">
-                    <div class="services_image position-relative mx-auto"><img loading="lazy"
-                            src="{{ url('images/detail_analysis_guy.webp') }}" height="220" width="220"
-                            alt="{{ app(\App\Settings\FeatureSettings::class)->feature2[0] }}"></div>
-                    <div class="services-details d-grid">
-                        <h3 class="text-center my-1 text-uppercase h4">
-                            {{ app(\App\Settings\FeatureSettings::class)->feature2[0] }}</h2>
-                            <p class="my-2 text-center">
-                                {{ app(\App\Settings\FeatureSettings::class)->feature2[1] }}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-5 col-sm-6 col-12 p-lg-2 p-md-2 p-1 mb-lg-0 mb-5">
-                <div class="services_card service_child3 p-3 py-4 rounded-5 position-relative h-100">
-                    <div class="services_image position-relative mx-auto"><img loading="lazy"
-                            src="{{ url('images/exam_quiz_guy.webp') }}" height="220" width="220"
-                            alt="{{ app(\App\Settings\FeatureSettings::class)->feature3[0] }}"></div>
-                    <div class="services-details d-grid">
-                        <h3 class="text-center my-1 text-uppercase h4">
-                            {{ app(\App\Settings\FeatureSettings::class)->feature3[0] }}</h2>
-                            <p class="my-2 text-center">
-                                {{ app(\App\Settings\FeatureSettings::class)->feature3[1] }}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-5 col-sm-6 col-12 p-lg-2 p-md-2 p-1 mb-lg-0 mb-5">
-                <div class="services_card service_child4 p-3 py-4 rounded-5 position-relative h-100">
-                    <div class="services_image position-relative mx-auto"><img loading="lazy"
-                            src="{{ url('images/learning_videos_guy.webp') }}" height="220" width="220"
-                            alt="{{ app(\App\Settings\FeatureSettings::class)->feature4[0] }}"></div>
-                    <div class="services-details d-grid">
-                        <h3 class="text-center my-1 text-uppercase h4">
-                            {{ app(\App\Settings\FeatureSettings::class)->feature4[0] }}</h2>
-                            <p class="my-2 text-center">
-                                {{ app(\App\Settings\FeatureSettings::class)->feature4[1] }}</p>
-                    </div>
-                </div>
+        <h2 class="display-5 text-center fw-medium my-4 section_heading mb-lg-4">Our Features<div class="heading_separator mx-auto rounded-pill mb-4"></div></h2>
+        <div class="row m-0 services_container py-lg-5 py-md-4 py-3 p-2 justify-content-center">
+          <div class="col-lg-3 col-md-5 col-sm-6 col-12 p-lg-2 p-md-2 p-1 mb-lg-0 mb-5">
+            <div class="services_card service_child1 p-3 py-4 rounded-5 position-relative h-100">
+              <div class="services_image position-relative mx-auto">
+                <img loading="lazy" src="{{ url('images/top_quality_question_guy.webp') }}" height="220" width="220" alt="{{ app(\App\Settings\FeatureSettings::class)->feature1[0] }}" />
+              </div>
+              <div class="services-details d-grid">
+                <h3 class="text-center my-1 text-uppercase h4">{{ app(\App\Settings\FeatureSettings::class)->feature1[0] }}</h3>
+                <p class="my-2 text-center">{{ app(\App\Settings\FeatureSettings::class)->feature1[1] }}</p>
+              </div>
             </div>
           </div>
+          <div class="col-lg-3 col-md-5 col-sm-6 col-12 p-lg-2 p-md-2 p-1 mb-lg-0 mb-5">
+            <div class="services_card service_child2 p-3 py-4 rounded-5 position-relative h-100">
+              <div class="services_image position-relative mx-auto">
+                <img loading="lazy" src="{{ url('images/detail_analysis_guy.webp') }}" height="220" width="220" alt="{{ app(\App\Settings\FeatureSettings::class)->feature2[0] }}" />
+              </div>
+              <div class="services-details d-grid">
+                <h3 class="text-center my-1 text-uppercase h4">{{ app(\App\Settings\FeatureSettings::class)->feature2[0] }}</h3>
+                <p class="my-2 text-center">{{ app(\App\Settings\FeatureSettings::class)->feature2[1] }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-5 col-sm-6 col-12 p-lg-2 p-md-2 p-1 mb-lg-0 mb-5">
+            <div class="services_card service_child3 p-3 py-4 rounded-5 position-relative h-100">
+              <div class="services_image position-relative mx-auto">
+                <img loading="lazy" src="{{ url('images/exam_quiz_guy.webp') }}" height="220" width="220" alt="{{ app(\App\Settings\FeatureSettings::class)->feature3[0] }}" />
+              </div>
+              <div class="services-details d-grid">
+                <h3 class="text-center my-1 text-uppercase h4">{{ app(\App\Settings\FeatureSettings::class)->feature3[0] }}</h3>
+                <p class="my-2 text-center">{{ app(\App\Settings\FeatureSettings::class)->feature3[1] }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-5 col-sm-6 col-12 p-lg-2 p-md-2 p-1 mb-lg-0 mb-5">
+            <div class="services_card service_child4 p-3 py-4 rounded-5 position-relative h-100">
+              <div class="services_image position-relative mx-auto"><img loading="lazy" src="{{ url('images/learning_videos_guy.webp') }}" height="220" width="220" alt="{{ app(\App\Settings\FeatureSettings::class)->feature4[0] }}"></div>
+              <div class="services-details d-grid">
+                <h3 class="text-center my-1 text-uppercase h4">{{ app(\App\Settings\FeatureSettings::class)->feature4[0] }}</h3>
+                <p class="my-2 text-center">{{ app(\App\Settings\FeatureSettings::class)->feature4[1] }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     @endif
     <div class="journey_banner_section p-3 py-5 row align-items-center m-0">
       <div class="col-lg-8 col-md-6 col-sm-12 col-12 my-2 header_text_side">
-          <p class="mb-1 fs-5 fw-light text-white">Student portal!</p>
-          <h2 class="fw-bold h1 text-white">Detailed Journey Planner</h2>
-          <p class="paragraph_font fw-light text-white mb-4">With our comprehensive learning roadmap, students follow
-              a well-organised educational path. We cover a wide range of topics and subtopics across each subject,
-              providing engaging lessons, interactive activities, and support for a complete learning journey.</p><a
-              aria-label="Explore Our Journey" href="{{ route('detailed_journey_planner') }}"
-              class="border-2 mt-4 mt-lg-0 mt-md-2 p-2 position-relative px-4 rounded-2 rounded-pill secondary_btn z-1 z-index-top">Explore
-              Our Journey</a>
+        <p class="mb-1 fs-5 fw-light text-white">Student portal!</p>
+        <h2 class="fw-bold h1 text-white">Detailed Journey Planner</h2>
+        <p class="paragraph_font fw-light text-white mb-4">With our comprehensive learning roadmap, students follow a well-organised educational path. We cover a wide range of topics and subtopics across each subject, providing engaging lessons, interactive activities, and support for a complete learning journey.</p>
+        <a aria-label="Explore Our Journey" href="{{ route('detailed_journey_planner') }}" class="border-2 mt-4 mt-lg-0 mt-md-2 p-2 position-relative px-4 rounded-2 rounded-pill secondary_btn z-1 z-index-top">
+          Explore Our Journey
+        </a>
       </div>
       <div class="col-lg-4 col-md-5 col-sm-12 col-12 my-2 align-items-center rounded-5 text-center position-relative journey_section_image_container">
         <img loading="lazy" src="{{ url('images/journey_header_image.webp') }}" class="position-absolute bottom-0 end-0 journey_section_image learning-image img-fluid" height="425" width="425" alt="journey guys image">

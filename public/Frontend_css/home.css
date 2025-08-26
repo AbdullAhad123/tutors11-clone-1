@@ -29,8 +29,11 @@ footer a {
 
 :root {
     --primary: #006ae7;
-    --secondary: #ff9d0b;
-    --navbar-secondary: #ffaa0b;
+    --secondary: #F8B55F;
+    --navbar-secondary: #F8B55F;
+    --dark_secondary: #ffb759;
+    --cta_primary: #F8E7F6;
+    --dark_cta_primary: #ffeffd;
     --lightersecondary: #ffe3b9;
     --lightblue: #97bcef;
     --lightprimary: #2f9aff;
@@ -61,8 +64,8 @@ footer a {
 }
 
 .cta_btn{
-    background: #F8B55F;
-    border: 2px solid #F8B55F;
+    background: var(--cta_primary);
+    border: 2px solid var(--cta_primary);
     color: #5a0853;
     transition: .25s;
     box-shadow: 0 5px 5px 0 #0000002b;
@@ -70,8 +73,8 @@ footer a {
 }
 
 .cta_btn:hover {
-    background: #ffb759;
-    border: 2px solid #ffb759;
+    background: var(--dark_cta_primary);
+    border: 2px solid var(--dark_cta_primary);
 }
 
 .outlined_secondary_btn,
@@ -90,16 +93,14 @@ footer a {
 }
 
 .secondary_btn {
-    /* background: var(--secondary);
-    border: 2px solid var(--secondary) */
-    background: #F8E7F6;
-    border: 2px solid #F8E7F6;
+    background: var(--secondary);
+    border: 2px solid var(--secondary);
     transition: 0.25s;
 }
 
 .secondary_btn:hover {
-    background: #ffeffd;
-    border: 2px solid #ffeffd;
+    background: var(--dark_secondary);
+    border: 2px solid var(--dark_secondary);
 }
 
 .primary_btn:hover {
@@ -262,8 +263,9 @@ html {
     fill: #fff
 }
 
-a.nav-link {
-    color: #fff !important;
+a.nav-link,
+button.nav-link {
+    color: var(--cta_primary) !important;
     font-size: 1rem;
     letter-spacing: normal;
     word-spacing: normal;
@@ -729,9 +731,10 @@ a {
 }
 
 a.nav-link.active,
-a.nav-link:hover {
+a.nav-link:hover,
+button.nav-link:hover {
     border-radius: 5px;
-    color: var(--navbar-secondary) !important
+    color: var(--white) !important
 }
 
 .transform_icon {
