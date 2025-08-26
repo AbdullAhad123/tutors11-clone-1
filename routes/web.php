@@ -1,0 +1,77 @@
+<?php
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SiteController;
+use App\Http\Controllers\AppInstallController;
+use App\Http\Controllers\AuthConroller;
+use App\Http\Controllers\SitemapController;
+use App\Http\Controllers\User\LoginAsParentController;
+use App\Http\Controllers\WebHookController;
+use App\Http\Controllers\User\CheckoutController;
+use App\Http\Controllers\pancontroller;
+use App\Http\Controllers\Admin\NotificationController;
+use App\Http\Controllers\Admin\ReviewController;
+use App\Http\Controllers\Admin\ChatController;
+use App\Http\Controllers\Admin\AvatarController;
+
+Route::get('/', [SiteController::class, 'index'])->name('welcome');
+Route::get('/detailed-journey-planner', [SiteController::class, 'detailedJourneyPlanner'])->name('detailed_journey_planner');
+Route::get('/about', [SiteController::class, 'about'])->name('about');
+Route::get('/explore', [SiteController::class, 'explorePage'])->name('explorePage');
+Route::get('/explore/{category}', [SiteController::class, 'explore'])->name('explore');
+Route::get('/pricing', [SiteController::class, 'pricing'])->name('pricing');
+Route::get('/help', [SiteController::class, 'help'])->name('help');
+Route::get('/contact', [SiteController::class, 'contact'])->name('contact');
+Route::get('/teachers', [SiteController::class, 'teachers'])->name('teachers');
+Route::get('/blogs', [SiteController::class, 'blogs'])->name('zzzz');
+Route::get('/blog/{slug}', [SiteController::class, 'getBlog'])->name('get_blog');
+Route::get('/privacy-policy', [SiteController::class, 'privacyPolicy'])->name('privacyPolicy');
+Route::get('/cookie-policy', [SiteController::class, 'cookiePolicy'])->name('cookiePolicy');
+Route::post('/get-contact', [SiteController::class, 'get_contact'])->name('GetContact');
+Route::post('/add-subscribe', [SiteController::class, 'add_subscribe'])->name('AddSubscribe');
+Route::post('read/{id}/notification', [NotificationController::class, 'read'])->name('read_notification');
+Route::get('/reviews', [SiteController::class, 'review'])->name('review');
+Route::get('/subject/science', [SiteController::class, 'subject_science'])->name('subject_science');
+Route::get('/subject/english', [SiteController::class, 'subject_english'])->name('subject_english');
+Route::get('/subject/maths', [SiteController::class, 'subject_maths'])->name('subject_maths');
+Route::get('/subject/verbal-reasoning', [SiteController::class, 'subject_verbal_reasoning'])->name('subject_verbal_reasoning');
+Route::get('/subject/non-verbal-reasoning', [SiteController::class, 'subject_non_verbal_reasoning'])->name('subject_non_verbal_reasoning');
+Route::post('/get_chat/{room_id}', [ChatController::class, 'getChat'])->name('get_chat');
+Route::post('/send_chat', [ChatController::class, 'sendChat'])->name('send_chat');
+Route::post('/send_blog_comment/{blog_id}', [SiteController::class, 'sendBlogComment'])->name('send_blog_comment');
+Route::get('/review/{id}', [SiteController::class, 'getReview'])->name('get_review');
+Route::get('set-locale/{locale}', [HomeController::class, 'setLocale'])->name('locale');
+Route::middleware(['auth:sanctum', 'verified'])->get('/home', [HomeController::class, 'index'])->name('home');
+
+Route::get('install-success', [AppInstallController::class, 'onSuccessfulInstall'])->name('install_success');
+Route::get('migrate', [AppInstallController::class, 'migrate'])->name('migrate');
+Route::get('run-migrations', [AppInstallController::class, 'runMigrations'])->name('run_migrations');
+
+Route::post('webhooks/razorpay', [WebHookController::class, 'razorpay'])->name('webhooks.razorpay');
+Route::post('/webhooks/stripe', [CheckoutController::class, 'stripeWebhook'])->name('stripe_webhook');
+
+Route::get('login_as_parent', [LoginAsParentController::class,"login_as_parent"])->name('login_as_parent');
+Route::post('user/login', [AuthConroller::class,"login"])->name('login_form');
+Route::get('login', [AuthConroller::class,"showLoginForm"])->name('userlogin');
+Route::get('reset-password', [AuthConroller::class,"resetPassword"])->name('reset_password');
+Route::post('change-password', [AuthConroller::class,"changePassword"])->name('change_password');
+Route::get('login/identify', [AuthConroller::class,"loginIdentify"])->name('login_identify');
+Route::post('login/identify', [AuthConroller::class,"verifyLoginIdentify"])->name('verify_login_identify');
+Route::get('registration', [AuthConroller::class,"showRegistrationForm"])->name('regis_form');
+Route::post('user_register', [AuthConroller::class,"userRegister"])->name('user_register');
+Route::get('email/verify', [AuthConroller::class,"emailVerify"])->name('email_verify');
+Route::post('email/code-verify', [AuthConroller::class,"verifyEmailCode"])->name('verify_email_code');
+Route::post('logout', [AuthConroller::class,"logout"])->name('destroy');
+Route::get('/sitemap.xml', [SitemapController::class,"main"])->name('sitemap');
+Route::get('/subjects_sitemap.xml', [SitemapController::class,"subjectsSitemap"])->name('subjects_sitemap');
+Route::get('/region_sitemap.xml', [SitemapController::class,"regionsSitemap"])->name('region_sitemap');
+Route::get('/school_sitemap.xml', [SitemapController::class,"schoolSitemap"])->name('school_sitemap');
+Route::get('/schools/page/{page}', [SiteController::class, 'schoolList'])->name('school_list');
+Route::get('/fetch-reviews', [ReviewController::class, 'getMoreReviews'])->name('get_more_reviews');
+Route::post('/buy-avatar/{id}', [AvatarController::class, 'buy'])->name('buy_avatar');
+Route::post('/select-avatar/{id}', [AvatarController::class, 'select'])->name('select_avatar');
+Route::get('/{subject}', [SiteController::class, 'subject'])->name('subject');
+Route::get('/schools/{region}', [SiteController::class, 'schoolRegion'])->name('school_region');
+Route::get('/{subject_region}/{topic_school}', [SiteController::class, 'topic'])->name('topic');
+Route::get('/{subject}/{topic}/{subtopic}', [SiteController::class, 'subTopic'])->name('sub_topic');
+

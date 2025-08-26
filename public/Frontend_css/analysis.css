@@ -1,0 +1,132 @@
+.question_border_black {
+    border: 1px solid #00000056;
+}
+
+.question_border_black_padding_left {
+    padding-left: 5rem;
+}
+.solution_box_container{
+height: fit-content;
+width: auto;
+}
+
+.sol_box_head {
+height: auto;
+width: auto;
+}
+
+.sol_btn_grade{
+width: 200px;
+padding: .5rem;
+border: 0;
+transition: 0.3s;
+user-select: none;
+}
+
+.sol_pass_grade{
+background-color: #296447;
+}
+.sol_pass_grade:hover {
+background-color: #389466;
+}
+
+.sol_fail_grade{
+background-color: #b02525;
+}
+.sol_fail_grade:hover {
+background-color: #c44242;
+}
+.badge_bg_light{
+background-color: #ecfffaea;
+}
+
+.sol_box_body {
+height: auto;
+}
+.sol_box_body_left{
+border-right: 2px solid #9c9c9c34;
+}
+
+@media (max-width: 991.5px){
+.sol_box_body_left{
+    border-right: none!important;
+    border-bottom: 1px solid #02020234;
+}
+}
+
+.tooltip_custom {
+--bs-tooltip-bg: #2b2b2b;
+}
+
+.sol_body_result_btn {
+background-color: transparent;
+}
+
+.sol_body_result_btn_correct{
+border: 2px solid black;
+box-shadow: 0px 8px 0px 0px black;
+}
+.sol_body_result_btn_wrong{
+border: 2px solid #d71b1b;
+box-shadow: 0px 8px 0px 0px #d71b1b;
+}
+.normal_text{
+font-size: 1.1rem;
+}
+@media (max-width: 380px){
+.sol_box_body_right_top{
+    justify-content: center!important;
+}
+.top_bar_results_indicator{
+    padding: 0.4rem!important
+}
+.flexbox_container{
+    padding: 1rem!important;
+}
+.sol_box_body {
+    padding: 0!important;
+}
+.solution_box_container {
+    padding: 0.3rem!important;
+}
+}
+
+.flexbox_container{
+height: fit-content;
+background-color: #f3f3f3!important
+}
+
+.question_separator{
+border-left: 2px solid black;
+}
+
+.sol_box_body_right_answer{
+text-decoration: 2px underline black;
+}
+
+.inline_flexbox_result{
+height: fit-content;
+border: 1px solid #009845;
+}
+
+.inline_flexbox_result_answer{
+height: fit-content;
+border: 1px solid #00ff73;
+background-color:#d6ffe9 ;
+color: black;
+}
+
+.inline_flexbox_result_badgeside{
+border-right: 1px solid #5b5b5b2c;
+}
+
+.inline_flexbox_result_badge{
+background-color:  #34D399;
+}
+
+.inline_flexbox_result_bottom{
+height: fit-content;
+border: 1px solid #ffea00;
+background-color:#fff6d6 ;
+color: black;
+}

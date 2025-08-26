@@ -1,0 +1,40 @@
+table th {
+    font-weight: bold;
+    font-size: 0.95rem !important;
+}
+
+table td,
+table th {
+    text-align: start;
+    color: rgb(26, 26, 26);
+}
+
+
+
+.result_btn {
+	padding: 8px;
+	border: 0;
+	background-color: #29b785!important;
+	font-size: .8rem;
+	color: #fff;
+	border-radius: 5px;
+}
+
+.analytics_btn{
+	background-color: #d1d5db;
+	border: none;
+	font-size: 0.8rem;
+	font-weight: 600;
+	cursor: not-allowed!important;
+	transition: 0.2s;
+}
+
+.analytics_btn:hover{
+	box-shadow: 0px 2px 3px 1px #0000003e;
+}
+
+.page_active {
+	background-color: #ebebeb;
+	padding: 2px 8px 2px 8px;
+	cursor: default;
+}
