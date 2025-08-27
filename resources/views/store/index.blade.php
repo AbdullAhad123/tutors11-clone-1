@@ -144,13 +144,36 @@
       .ratingCard {
         height: auto;
         width: auto;
-        background-color: #fff;
+        background-color: #f8e7f6;
         padding: 0.75rem;
         border-radius: 8px;
         box-shadow: 0px 3px 5px 0 #00000042;
       }
     </style>
 </head>
+<style>
+  .cont_wrapper {
+    max-width: 1320px !important
+  }
+
+  .navDropdownMenu {
+    background: #cc71c4b8;
+    backdrop-filter: blur(8px);
+    box-shadow: inset 0px 0 14px 3px #b35cab !important;
+  }
+
+  .navDropdownMenu li a {
+    color: var(--cta_primary) !important;
+    fill: var(--cta_primary) !important;
+    transition: 0.25s
+  }
+
+  .navDropdownMenu li a:hover {
+    background: transparent !important;
+    color: var(--white) !important;
+    fill: var(--white) !important;
+  }
+</style>
 <body>
     <script type="application/ld+json">
       {
@@ -190,96 +213,98 @@
     <section class="header">@include('components.home-navbar') 
       @if (app(\App\Settings\HomepageSettings::class)->enable_hero)
         <header class="header_section">
-          <div class="d-flex justify-content-center align-items-center col-lg-11 col-md-12 col-sm-12 col-12 mx-auto pt-lg-4 pt-md-3 pt-0">
-            <div class="row align-items-center m-0 pt-4">
-              <div class="align-items-center col-12 col-lg-6 col-md-10 col-sm-12 header_text_side justify-content-center mt-5 mt-lg-0 mt-md-5 mt-sm-5 my-2 p-3 py-lg-0">
-                <p class="fs-5 fw-normal mb-0 mt-4 text-white text-uppercase">Eleven Plus Tutors</p>
-                {{-- <h1 class="display-5 fw-medium text-white">{{ app(\App\Settings\HeroSettings::class)->title }}</h1>
-                <p class="fs-5 fw-light header_heading my-2 text-white">{{ app(\App\Settings\HeroSettings::class)->subtitle }}</p> --}}
-                <h1 class="display-5 fw-medium text-white">Leading 11+ Academy in United Kingdom</h1>
-                <p class="fs-5 fw-light header_heading my-2 text-white">At TutorsElevenPlus, We help students to shine in their 11+ journey with the right guidance, learning and confidence. Get started and excel your next 11+ exams!</p>
-                <div class="subscribe_form my-3">
-                  <div class="newletter_form">
-                    <input class="form-control text-dark px-3" id="subscribeEmailbtn" placeholder="Enter email to subscribe...">
-                    <button id="submitSubscribe" aria-label="Subscribe Us">
-                      <i class="fab fa-telegram-plane"></i>
-                      <span class="ms-1 text-white d-none spinner-border spinner-border-sm" aria-hidden="true"></span>
-                    </button>
+          <div class="container-lg cont_wrapper">
+            <div class="d-flex justify-content-center align-items-center pt-lg-5 pt-md-4">
+              <div class="row align-items-center m-0 pt-4">
+                <div class="align-items-center col-12 col-lg-6 col-md-10 col-sm-12 header_text_side justify-content-center mt-5 mt-lg-0 mt-md-5 mt-sm-5 my-2 p-3 py-lg-0">
+                  <p class="fs-5 fw-normal mb-0 mt-4 text-white text-uppercase">Eleven Plus Tutors</p>
+                  {{-- <h1 class="display-5 fw-medium text-white">{{ app(\App\Settings\HeroSettings::class)->title }}</h1>
+                  <p class="fs-5 fw-light header_heading my-2 text-white">{{ app(\App\Settings\HeroSettings::class)->subtitle }}</p> --}}
+                  <h1 class="display-5 fw-medium text-white">Leading 11+ Academy in United Kingdom</h1>
+                  <p class="fs-5 fw-light header_heading my-2 text-white">At TutorsElevenPlus, We help students to shine in their 11+ journey with the right guidance, learning and confidence. Get started and excel your next 11+ exams!</p>
+                  <div class="subscribe_form my-3">
+                    <div class="newletter_form">
+                      <input class="form-control fw-normal px-3 rounded-pill newletter_form_input" id="subscribeEmailbtn" placeholder="Subscribe our newsletter">
+                      <button id="submitSubscribe" aria-label="Subscribe Us">
+                        <i class="fab fa-telegram-plane"></i>
+                        <span class="ms-1 text-white d-none spinner-border spinner-border-sm" aria-hidden="true"></span>
+                      </button>
+                    </div>
+                    <p class="email_error d-none text-warning my-1"></p>
                   </div>
-                  <p class="email_error d-none text-warning my-1"></p>
+                  <div class="align-items-center d-flex flex-wrap gap-2 my-2">
+                    <a class="ratingCard align-items-center d-inline-flex gap-2 my-2 text-light" href="{{ route('review') }}">
+                      <img src="{{ url('images/google_review.webp') }}" width="80" height="auto" alt="google reviews logo" />
+                      <div>
+                        <p class="fw-light m-0 text-secondary">Rated</p>
+                        <p class="fw-medium m-0 text-dark">5/5 on Google</p>
+                      </div>
+                    </a>
+                    <a class="ratingCard align-items-center d-inline-flex gap-2 my-2 text-light" href="{{ route('review') }}">
+                      <img src="{{ url('images/trustpilot_review.webp') }}" width="80" height="auto" alt="trustpilot logo" />
+                      <div>
+                        <p class="fw-light m-0 text-secondary">Rated</p>
+                        <p class="fw-medium m-0 text-dark">5/5 on Trustpilot</p>
+                      </div>
+                    </a>
+                  </div>
                 </div>
-                <div class="align-items-center d-flex flex-wrap gap-2 my-2">
-                  <a class="ratingCard align-items-center d-inline-flex gap-2 my-2 text-light" href="{{ route('review') }}">
-                    <img src="{{ url('images/google_review.webp') }}" width="80" height="auto" alt="google reviews logo" />
-                    <div>
-                      <p class="fw-light m-0 text-secondary">We are rated</p>
-                      <p class="fw-medium m-0 text-dark">5/5 on Google</p>
-                    </div>
-                  </a>
-                  <a class="ratingCard align-items-center d-inline-flex gap-2 my-2 text-light" href="{{ route('review') }}">
-                    <img src="{{ url('images/trustpilot_review.webp') }}" width="80" height="auto" alt="trustpilot logo" />
-                    <div>
-                      <p class="fw-light m-0 text-secondary">We are rated</p>
-                      <p class="fw-medium m-0 text-dark">5/5 on Trustpilot</p>
-                    </div>
-                  </a>
+                <div class="col-lg-6 mt-lg-5 text-center">
+                  <img src="{{ url('images/index_header_image.webp') }}" alt="{{ app(\App\Settings\SiteSettings::class)->app_name }} header image" class="header_image" height="100%" width="100%">
                 </div>
-              </div>
-              <div class="col-lg-6 mt-lg-5 text-center">
-                <img src="{{ url('images/index_header_image.webp') }}" alt="{{ app(\App\Settings\SiteSettings::class)->app_name }} header image" class="header_image" height="100%" width="100%">
               </div>
             </div>
-          </div>
-          <div class="row align-items-center m-0 p-0 py-2 subject_cards_container container mx-auto">
-              <div class="col-lg-3 col-md-5 col-sm-6 col-6 my-2 p-lg-3 p-md-3 p-sm-2 p-1">
-                <a href="{{ route('subject_english') }}" class="text-decoration-none text-muted">
-                  <div class="subject_card p-2 rounded-4 text-center subject_odd_card">
-                    <div class="subject_details">
-                      <div class="align-items-center d-flex justify-content-center rounded-circle small subject_badge_3d text-white">1</div>
-                      <span class="h5 m-0 ms-2 text-uppercase">english</span>
+            <div class="row align-items-center m-0 p-0 py-2 subject_cards_container container mx-auto">
+                <div class="col-lg-3 col-md-5 col-sm-6 col-6 my-2 p-lg-3 p-md-3 p-sm-2 p-1">
+                  <a href="{{ route('subject_english') }}" class="text-decoration-none text-muted">
+                    <div class="subject_card p-2 rounded-4 text-center subject_odd_card">
+                      <div class="subject_details">
+                        <div class="align-items-center d-flex justify-content-center rounded-circle small subject_badge_3d text-white">1</div>
+                        <span class="h5 m-0 ms-2 text-uppercase">english</span>
+                      </div>
+                      <img src="{{ url('images/subject_english.webp') }}" width="215" height="252" class="img-fluid" alt="english">
                     </div>
-                    <img src="{{ url('images/subject_english.webp') }}" width="215" height="252" class="img-fluid" alt="english">
-                  </div>
-                </a>
-              </div>
-              <div class="col-lg-3 col-md-5 col-sm-6 col-6 my-2 p-lg-3 p-md-3 p-sm-2 p-1">
-                <a href="{{ route('subject_maths') }}" class="text-decoration-none text-muted">
-                  <div class="subject_card p-2 rounded-4 text-center subject_even_card">
-                    <div class="subject_details">
-                      <div class="align-items-center d-flex justify-content-center rounded-circle small subject_badge_3d text-white">2</div>
-                      <span class="h5 m-0 ms-2 text-uppercase">maths</span>
+                  </a>
+                </div>
+                <div class="col-lg-3 col-md-5 col-sm-6 col-6 my-2 p-lg-3 p-md-3 p-sm-2 p-1">
+                  <a href="{{ route('subject_maths') }}" class="text-decoration-none text-muted">
+                    <div class="subject_card p-2 rounded-4 text-center subject_even_card">
+                      <div class="subject_details">
+                        <div class="align-items-center d-flex justify-content-center rounded-circle small subject_badge_3d text-white">2</div>
+                        <span class="h5 m-0 ms-2 text-uppercase">maths</span>
+                      </div>
+                      <img src="{{ url('images/subject_maths.webp') }}" width="215" height="252" class="img-fluid" alt="maths">
                     </div>
-                    <img src="{{ url('images/subject_maths.webp') }}" width="215" height="252" class="img-fluid" alt="maths">
-                  </div>
-                </a>
-              </div>
-              <div class="col-lg-3 col-md-5 col-sm-6 col-6 my-2 p-lg-3 p-md-3 p-sm-2 p-1">
-                <a href="{{ route('subject_verbal_reasoning') }}" class="text-decoration-none text-muted">
-                  <div class="subject_card p-2 rounded-4 text-center subject_odd_card">
-                    <div class="subject_details">
-                      <div class="align-items-center d-flex justify-content-center rounded-circle small subject_badge_3d text-white">3</div>
-                      <span class="h5 m-0 ms-2 text-uppercase">verbal</span>
+                  </a>
+                </div>
+                <div class="col-lg-3 col-md-5 col-sm-6 col-6 my-2 p-lg-3 p-md-3 p-sm-2 p-1">
+                  <a href="{{ route('subject_verbal_reasoning') }}" class="text-decoration-none text-muted">
+                    <div class="subject_card p-2 rounded-4 text-center subject_odd_card">
+                      <div class="subject_details">
+                        <div class="align-items-center d-flex justify-content-center rounded-circle small subject_badge_3d text-white">3</div>
+                        <span class="h5 m-0 ms-2 text-uppercase">verbal</span>
+                      </div>
+                      <img src="{{ url('images/verbal_reasoning_image.webp') }}" width="215" height="252" class="img-fluid" alt="Verbal reasoning">
                     </div>
-                    <img src="{{ url('images/verbal_reasoning_image.webp') }}" width="215" height="252" class="img-fluid" alt="Verbal reasoning">
-                  </div>
-                </a>
-              </div>
-              <div class="col-lg-3 col-md-5 col-sm-6 col-6 my-2 p-lg-3 p-md-3 p-sm-2 p-1">
-                <a href="{{ route('subject_non_verbal_reasoning') }}" class="text-decoration-none text-muted">
-                  <div class="subject_card p-2 rounded-4 text-center subject_even_card">
-                    <div class="subject_details">
-                      <div class="align-items-center d-flex justify-content-center rounded-circle small subject_badge_3d text-white">4</div>
-                      <span class="h5 m-0 ms-2 text-uppercase">non-verbal</span>
+                  </a>
+                </div>
+                <div class="col-lg-3 col-md-5 col-sm-6 col-6 my-2 p-lg-3 p-md-3 p-sm-2 p-1">
+                  <a href="{{ route('subject_non_verbal_reasoning') }}" class="text-decoration-none text-muted">
+                    <div class="subject_card p-2 rounded-4 text-center subject_even_card">
+                      <div class="subject_details">
+                        <div class="align-items-center d-flex justify-content-center rounded-circle small subject_badge_3d text-white">4</div>
+                        <span class="h5 m-0 ms-2 text-uppercase">non-verbal</span>
+                      </div>
+                      <img src="{{ url('images/subject_nvr.webp') }}" width="215" height="252" class="img-fluid" alt="non-Verbal reasoning">
                     </div>
-                    <img src="{{ url('images/subject_nvr.webp') }}" width="215" height="252" class="img-fluid" alt="non-Verbal reasoning">
-                  </div>
-                </a>
-              </div>
+                  </a>
+                </div>
+            </div>
           </div>
         </header>
         <svg class="svg-image" viewBox="0 0 1920 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <path fill="#0c76ed" d="M 0 0 C 485.5 0 485.5 110 971 110 L 971 110 L 971 0 L 0 0 Z" stroke-width="0"></path>
-          <path fill="#0c76ed" d="M 970 110 C 1445 110 1445 0 1920 0 L 1920 0 L 1920 0 L 970 0 Z" stroke-width="0"></path>
+          <path fill="#A11A96" d="M 0 0 C 485.5 0 485.5 110 971 110 L 971 110 L 971 0 L 0 0 Z" stroke-width="0"></path>
+          <path fill="#A11A96" d="M 970 110 C 1445 110 1445 0 1920 0 L 1920 0 L 1920 0 L 970 0 Z" stroke-width="0"></path>
         </svg>
       @endif
     </section>

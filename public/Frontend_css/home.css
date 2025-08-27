@@ -28,7 +28,7 @@ footer a {
 }
 
 :root {
-    --primary: #006ae7;
+    --primary: #A8229C;
     --secondary: #F8B55F;
     --navbar-secondary: #F8B55F;
     --dark_secondary: #ffb759;
@@ -484,19 +484,34 @@ a {
 .newletter_form input {
     width: 100%;
     padding: 14px 28px;
-    color: #fff
+    /* color: #fff; */
+}
+
+.newletter_form_input {
+    padding: 16px 30px !important;
+    background: #e7a3e166 !important;
+    color: var(--white) !important;
+    box-shadow: none !important;
+}
+
+.newletter_form_input::placeholder {
+    color: var(--cta_primary) !important;
+}
+
+.newletter_form_input:focus {
+    border-color: var(--cta_primary) !important;
 }
 
 .subscribe-form button,
 .newletter_form button {
     position: absolute;
-    right: 0;
-    background: #ff9d0b;
-    padding: 14px 18px;
-    border: 1px solid #ff9d0b;
-    top: 0;
-    border-bottom-right-radius: 8px;
-    border-top-right-radius: 8px
+    right: 5px;
+    background: var(--dark_secondary);
+    padding: 10px 14px;
+    border: 1px solid var(--dark_secondary);
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 30px;
 }
 
 .subscribe-form button i,
