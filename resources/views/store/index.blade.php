@@ -22,6 +22,7 @@
     <link rel="preconnect" href="https://td.doubleclick.net">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="preload" href="{{ url('Frontend_css/all.css') }}" as="style">
     <link rel="preload" href="{{ url('Frontend_css/home.css') }}" as="style">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" as="style" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -29,6 +30,7 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500&display=swap" as="style" onload='this.onload=null,this.rel="stylesheet"'>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500&display=swap" rel="stylesheet">
     @include('components.google-tags')
+    <link rel="stylesheet" href="{{ asset('Frontend_css/all.css') }}">
     <link rel="stylesheet" href="{{ asset('Frontend_css/home.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -43,213 +45,7 @@
     <meta property="og:locale" content="en_GB" />
     <link rel="alternate" href="https://tutorselevenplus.co.uk/ " hreflang="x-default">
     <link rel="alternate" href="https://tutorselevenplus.co.uk/ " hreflang="en-UK">
-    <style>
-      .header_section {
-        min-height: 600px;
-        max-height: fit-content;
-        width: auto;
-        background: url('../images/header_bg_vectors.png') center no-repeat, radial-gradient(#d860ce, #8f0283);
-        background-size: cover
-      }
-
-      .svg-image {
-        margin-top: -1px
-      }
-
-      .faq_question_section {
-        height: auto;
-        width: auto
-      }
-
-      .answer_parent {
-        display: none
-      }
-
-      .service_child1 {
-        background: #bbd1f4
-      }
-
-      .service_child2 {
-        background: #ffe5c2
-      }
-
-      .service_child3 {
-        background: #d2cdc7
-      }
-
-      .service_child4 {
-        background: #ffc747
-      }
-
-      .header_heading {
-        line-height: 1.6
-      }
-
-      .header_image {
-        filter: contrast(1.1);
-        max-width: 600px !important
-      }
-
-      .learning-image {
-        box-shadow: (1px 1px 0 #00000035)
-      }
-
-      .faq_question {
-        cursor: pointer
-      }
-
-      .progress,
-      .progress-bar {
-        height: .5rem
-      }
-
-      .team-card {
-        width: 12rem
-      }
-
-      .services_card {
-        height: auto
-      }
-
-      .services_image {
-        height: 160px;
-        width: auto
-      }
-
-      .services_image img {
-        position: absolute;
-        left: 50%;
-        right: 50%;
-        top: -75px;
-        transform: translateX(-50%)
-      }
-
-      .testimonial_text {
-        height: 260px;
-        overflow-y: auto;
-        line-height: 1.9rem !important
-      }
-
-      .testimonial_text::-webkit-scrollbar {
-        width: 5px !important
-      }
-
-      .category-text {
-        color: var(--primary)
-      }
-
-      .responsive_image {
-        max-width: 500px !important
-      }
-      .ratingCard {
-        height: auto;
-        width: auto;
-        background-color: #f8e7f6;
-        padding: 0.75rem;
-        border-radius: 8px;
-        box-shadow: 0px 3px 5px 0 #00000042;
-      }
-    </style>
 </head>
-<style>
-  .cont_wrapper {
-    max-width: 1320px !important
-  }
-
-  .navDropdownMenu {
-    background: #cc71c4b8;
-    backdrop-filter: blur(8px);
-    box-shadow: inset 0px 0 14px 3px #b35cab !important;
-  }
-
-  .navDropdownMenu li a {
-    color: var(--cta_primary) !important;
-    fill: var(--cta_primary) !important;
-    transition: 0.25s
-  }
-
-  .navDropdownMenu li a:hover {
-    background: transparent !important;
-    color: var(--white) !important;
-    fill: var(--white) !important;
-  }
-
-  /* top shape  */
-  .section_top_shape_wave {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-  }
-
-  .section_top_shape_wave svg {
-    position: relative;
-    display: block;
-    width: calc(132% + 1.3px);
-    height: 76px;
-  }
-
-  .section_top_shape_wave .shape-fill {
-    fill: #FFFFFF;
-  }
-
-  /** For tablet devices **/
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .section_top_shape_wave svg {
-      width: calc(132% + 1.3px);
-      height: 55px;
-    }
-  }
-
-  /** For mobile devices **/
-  @media (max-width: 767px) {
-    .section_top_shape_wave svg {
-      width: calc(132% + 1.3px);
-      height: 46px;
-    }
-  }
-  
-  /* bottom shape  */
-  .section_down_shape_wave {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-  }
-
-  .section_down_shape_wave svg {
-    position: relative;
-    display: block;
-    width: calc(132% + 1.3px);
-    height: 76px;
-    width: 100%
-  }
-
-  .section_down_shape_wave .shape-fill {
-    fill: #FFFFFF !important;
-  }
-
-  /** For tablet devices **/
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .section_down_shape_wave svg {
-      width: calc(132% + 1.3px);
-      height: 55px;
-    }
-  }
-
-  /** For mobile devices **/
-  @media (max-width: 767px) {
-    .section_down_shape_wave svg {
-      width: calc(132% + 1.3px);
-      height: 46px;
-    }
-  }
-</style>
 <body>
     <script type="application/ld+json">
       {
