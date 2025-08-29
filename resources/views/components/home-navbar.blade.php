@@ -159,20 +159,17 @@
         </div>
     </div>
 </nav>
-<div class="offcanvas offcanvas-top vh-100" data-bs-scroll="true" tabindex="-1" id="offcanvasTop"
-    aria-labelledby="offcanvasTopLabel">
-    <div class="offcanvas-header customize_sidebar_header"><a aria-label="Home"
-            class="text-decoration-none text-dark d-flex align-items-center" href="/"><img
-                src="{{ url('storage/' . app(\App\Settings\SiteSettings::class)->logo_path) }}" width="45"
-                height="45" class=""
-                alt="{{ url('storage/' . app(\App\Settings\SiteSettings::class)->app_name) }}"> </a><button
-            type="button" class="border-0 bg-transparent" data-bs-dismiss="offcanvas" aria-label="Close"><svg
-                xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24"
-                style="stroke:#0f67f5">
-                <path
-                    d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z">
-                </path>
-            </svg></button></div>
+<div class="offcanvas offcanvas-top vh-100" data-bs-scroll="true" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+    <div class="offcanvas-header customize_sidebar_header">
+        <a aria-label="Home" class="text-decoration-none text-dark d-flex align-items-center" href="/">
+            <img src="{{ url('storage/' . app(\App\Settings\SiteSettings::class)->logo_path) }}" width="45" height="45" class="" alt="{{ url('storage/' . app(\App\Settings\SiteSettings::class)->app_name) }}"> 
+        </a>
+        <button type="button" class="border-0 bg-transparent" data-bs-dismiss="offcanvas" aria-label="Close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="var(--cta_primary)">
+                <path d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"></path>
+            </svg>
+        </button>
+    </div>
     <hr>
     <div class="offcanvas-body" style="list-style:none">
         <ul class="list-unstyled m-0">

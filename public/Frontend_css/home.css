@@ -36,7 +36,7 @@ footer a {
     --dark_cta_primary: #ffeffd;
     --lightersecondary: #ffe3b9;
     --lightblue: #97bcef;
-    --lightprimary: #2f9aff;
+    --lightprimary: #df3bd1;
     --greyprimary: #0074d9;
     --whiteprimary: #95ceff;
     --white: #ffffff;
@@ -205,7 +205,7 @@ html {
 .subject_card {
     height: auto;
     width: auto;
-    background: #fff;
+    background: linear-gradient(to top, var(--cta_primary), #fffbfe);
     filter: drop-shadow(2px 5px 5px #00000065);
     transition: .3s
 }
@@ -226,7 +226,7 @@ html {
 .subject_badge_3d {
     height: 30px;
     width: 30px;
-    background: linear-gradient(334deg, #0064ff, #62a1ff);
+    background: linear-gradient(334deg, var(--primary), var(--lightprimary));
     box-shadow: 2px 2px 3px 0 #0000005c
 }
 

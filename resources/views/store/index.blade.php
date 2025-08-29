@@ -254,7 +254,7 @@
                 </div>
               </div>
             </div>
-            <div class="row align-items-center m-0 p-0 py-2 subject_cards_container container mx-auto">
+            <div class="row align-items-center m-0 p-0 py-3 subject_cards_container container mx-auto">
                 <div class="col-lg-3 col-md-5 col-sm-6 col-6 my-2 p-lg-3 p-md-3 p-sm-2 p-1">
                   <a href="{{ route('subject_english') }}" class="text-decoration-none text-muted">
                     <div class="subject_card p-2 rounded-4 text-center subject_odd_card">
@@ -262,7 +262,7 @@
                         <div class="align-items-center d-flex justify-content-center rounded-circle small subject_badge_3d text-white">1</div>
                         <span class="h5 m-0 ms-2 text-uppercase">english</span>
                       </div>
-                      <img src="{{ url('images/subject_english.webp') }}" width="215" height="252" class="img-fluid" alt="english">
+                      <img src="{{ url('images/subject_english.png') }}" width="215" height="252" class="img-fluid" alt="english">
                     </div>
                   </a>
                 </div>
@@ -273,7 +273,7 @@
                         <div class="align-items-center d-flex justify-content-center rounded-circle small subject_badge_3d text-white">2</div>
                         <span class="h5 m-0 ms-2 text-uppercase">maths</span>
                       </div>
-                      <img src="{{ url('images/subject_maths.webp') }}" width="215" height="252" class="img-fluid" alt="maths">
+                      <img src="{{ url('images/subject_maths.png') }}" width="215" height="252" class="img-fluid" alt="maths">
                     </div>
                   </a>
                 </div>
@@ -284,7 +284,7 @@
                         <div class="align-items-center d-flex justify-content-center rounded-circle small subject_badge_3d text-white">3</div>
                         <span class="h5 m-0 ms-2 text-uppercase">verbal</span>
                       </div>
-                      <img src="{{ url('images/verbal_reasoning_image.webp') }}" width="215" height="252" class="img-fluid" alt="Verbal reasoning">
+                      <img src="{{ url('images/verbal_reasoning_image.png') }}" width="215" height="252" class="img-fluid" alt="Verbal reasoning">
                     </div>
                   </a>
                 </div>
@@ -295,7 +295,7 @@
                         <div class="align-items-center d-flex justify-content-center rounded-circle small subject_badge_3d text-white">4</div>
                         <span class="h5 m-0 ms-2 text-uppercase">non-verbal</span>
                       </div>
-                      <img src="{{ url('images/subject_nvr.webp') }}" width="215" height="252" class="img-fluid" alt="non-Verbal reasoning">
+                      <img src="{{ url('images/subject_nvr.png') }}" width="215" height="252" class="img-fluid" alt="non-Verbal reasoning">
                     </div>
                   </a>
                 </div>
@@ -314,8 +314,8 @@
           <img loading="lazy" src="images/about_boy_image.webp" alt="about us mockup" class="learning-image img-fluid" width="373" height="373">
         </div>
         <div class="col-lg-8 col-md-6 col-sm-12 col-12">
-          <p class="fs-6 fw-medium mb-0 text-uppercase text_primary">About{{ app(\App\Settings\SiteSettings::class)->app_name }}</p>
-          <h2 class="display-5 fw-medium mb-3">Meet the 11 Plus Online Tutors Behind Your 11+ Success</h2>
+          <p class="fs-6 fw-medium mb-0 text-uppercase text_primary">What is {{ app(\App\Settings\SiteSettings::class)->app_name }}</p>
+          <h2 class="display-5 fw-medium mb-3"></h2>
           <p class="paragraph_font fw-light">At {{ app(\App\Settings\SiteSettings::class)->app_name }}, we
             proudly spearhead online education in the United Kingdom, committed to nurturing 11+ students
             towards excellence with the enthusiastic collaboration of parents and highly qualified educators.
