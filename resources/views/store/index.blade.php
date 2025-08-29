@@ -173,6 +173,82 @@
     color: var(--white) !important;
     fill: var(--white) !important;
   }
+
+  /* top shape  */
+  .section_top_shape_wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .section_top_shape_wave svg {
+    position: relative;
+    display: block;
+    width: calc(132% + 1.3px);
+    height: 76px;
+  }
+
+  .section_top_shape_wave .shape-fill {
+    fill: #FFFFFF;
+  }
+
+  /** For tablet devices **/
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .section_top_shape_wave svg {
+      width: calc(132% + 1.3px);
+      height: 55px;
+    }
+  }
+
+  /** For mobile devices **/
+  @media (max-width: 767px) {
+    .section_top_shape_wave svg {
+      width: calc(132% + 1.3px);
+      height: 46px;
+    }
+  }
+  
+  /* bottom shape  */
+  .section_down_shape_wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+
+  .section_down_shape_wave svg {
+    position: relative;
+    display: block;
+    width: calc(132% + 1.3px);
+    height: 76px;
+    width: 100%
+  }
+
+  .section_down_shape_wave .shape-fill {
+    fill: #FFFFFF !important;
+  }
+
+  /** For tablet devices **/
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .section_down_shape_wave svg {
+      width: calc(132% + 1.3px);
+      height: 55px;
+    }
+  }
+
+  /** For mobile devices **/
+  @media (max-width: 767px) {
+    .section_down_shape_wave svg {
+      width: calc(132% + 1.3px);
+      height: 46px;
+    }
+  }
 </style>
 <body>
     <script type="application/ld+json">
@@ -314,32 +390,31 @@
           <img loading="lazy" src="images/about_boy_image.webp" alt="about us mockup" class="learning-image img-fluid" width="373" height="373">
         </div>
         <div class="col-lg-8 col-md-6 col-sm-12 col-12">
-          <p class="fs-6 fw-medium mb-0 text-uppercase text_primary">What is {{ app(\App\Settings\SiteSettings::class)->app_name }}</p>
-          <h2 class="display-5 fw-medium mb-3"></h2>
-          <p class="paragraph_font fw-light">At {{ app(\App\Settings\SiteSettings::class)->app_name }}, we
-            proudly spearhead online education in the United Kingdom, committed to nurturing 11+ students
-            towards excellence with the enthusiastic collaboration of parents and highly qualified educators.
-            Our platform offers a diverse range of question sets, tests, and exams, delivering swift and
-            efficient learning through 11 plus tuition and 11 plus online tuition. Ensuring your child's journey
-            to success is our top priority.
-          </p>
-          <div class="align-items-center d-flex flex-wrap justify-content-between py-2">
-              <p class="paragraph_font m-0 ms-2 d-flex align-items-center m-2"><i
-                      class="fa-solid fa-circle-check text_secondary paragraph_font me-2"></i>Question Sets</p>
-              <p class="paragraph_font ms-2 d-flex align-items-center m-2"><i
-                      class="fa-solid fa-circle-check text_secondary paragraph_font me-2"></i>Learning Journeys
+          <p class="fs_5 fw-medium mb-0 text-uppercase text_primary">What is {{ app(\App\Settings\SiteSettings::class)->app_name }}</p>
+          <h2 class="display-5 fw-medium mb-3">Making education simple & fun for students</h2>
+          <p class="paragraph_font fw-light">At {{ app(\App\Settings\SiteSettings::class)->app_name }}, we are proud to lead the way in online learning across the UK. We are dedicated to helping 11+ students do their best, with the support of parents and skilled teachers. Our platform provides a wide variety of practice questions, tests, and exams, making learning simple and effective through 11 Plus tuition and online lessons. Your child’s success is always our main goal.</p>
+          <div class="align-items-center d-flex flex-wrap justify-content-between py-2 mb-3">
+              <p class="paragraph_font m-0 ms-2 d-flex align-items-center m-2">
+                <i class="fa-solid fa-circle-check text_secondary paragraph_font me-2"></i>
+                Question Sets
               </p>
-              <p class="paragraph_font ms-2 d-flex align-items-center m-2"><i
-                      class="fa-solid fa-circle-check text_secondary paragraph_font me-2"></i>Live Exams & Tests
+              <p class="paragraph_font ms-2 d-flex align-items-center m-2">
+                <i class="fa-solid fa-circle-check text_secondary paragraph_font me-2"></i>
+                Learning Journeys
+              </p>
+              <p class="paragraph_font ms-2 d-flex align-items-center m-2">
+                <i class="fa-solid fa-circle-check text_secondary paragraph_font me-2"></i>
+                Live Exams & Tests
               </p>
           </div>
-          <a href="/about" aria-label="About Us" class="border-2 secondary_btn p-2 px-4 rounded-2 rounded-pill text-start my-3">About us</a>
+          <a href="/about" aria-label="About Us" class="border-2 secondary_btn p-2 px-4 rounded-2 rounded-pill text-start text-white my-3">Learn more</a>
         </div>
       </section>
     @endif
     @if (app(\App\Settings\HomepageSettings::class)->enable_features)
       <section class="service_section p-2 fixed_width">
-        <h2 class="display-5 text-center fw-medium my-4 section_heading mb-lg-4">Our Features<div class="heading_separator mx-auto rounded-pill mb-4"></div></h2>
+        <h2 class="display-5 text-center fw-medium my-4 section_heading mb-2">Why to choose <br> {{ app(\App\Settings\SiteSettings::class)->app_name }}?</h2>
+        <div class="heading_separator mx-auto rounded-pill mb-4"></div>
         <div class="row m-0 services_container py-lg-5 py-md-4 py-3 p-2 justify-content-center">
           <div class="col-lg-3 col-md-5 col-sm-6 col-12 p-lg-2 p-md-2 p-1 mb-lg-0 mb-5">
             <div class="services_card service_child1 p-3 py-4 rounded-5 position-relative h-100">
@@ -347,8 +422,10 @@
                 <img loading="lazy" src="{{ url('images/top_quality_question_guy.webp') }}" height="220" width="220" alt="{{ app(\App\Settings\FeatureSettings::class)->feature1[0] }}" />
               </div>
               <div class="services-details d-grid">
-                <h3 class="text-center my-1 text-uppercase h4">{{ app(\App\Settings\FeatureSettings::class)->feature1[0] }}</h3>
-                <p class="my-2 text-center">{{ app(\App\Settings\FeatureSettings::class)->feature1[1] }}</p>
+                {{-- <h3 class="text-center my-1 text-uppercase h4">{{ app(\App\Settings\FeatureSettings::class)->feature1[0] }}</h3>
+                <p class="my-2 text-center">{{ app(\App\Settings\FeatureSettings::class)->feature1[1] }}</p> --}}
+                <h3 class="text-center text_primary_em my-1 text-uppercase h4">Strong Foundations</h3>
+                <p class="my-2 text-center">Step-by-step learning to help children master the 11+ syllabus with confidence.</p>
               </div>
             </div>
           </div>
@@ -358,8 +435,10 @@
                 <img loading="lazy" src="{{ url('images/detail_analysis_guy.webp') }}" height="220" width="220" alt="{{ app(\App\Settings\FeatureSettings::class)->feature2[0] }}" />
               </div>
               <div class="services-details d-grid">
-                <h3 class="text-center my-1 text-uppercase h4">{{ app(\App\Settings\FeatureSettings::class)->feature2[0] }}</h3>
-                <p class="my-2 text-center">{{ app(\App\Settings\FeatureSettings::class)->feature2[1] }}</p>
+                {{-- <h3 class="text-center my-1 text-uppercase h4">{{ app(\App\Settings\FeatureSettings::class)->feature2[0] }}</h3>
+                <p class="my-2 text-center">{{ app(\App\Settings\FeatureSettings::class)->feature2[1] }}</p> --}}
+                <h3 class="text-center text_secondary_em my-1 text-uppercase h4">Smart Progress</h3>
+                <p class="my-2 text-center">Clear progress reports to track and support your child’s learning journey.</p>
               </div>
             </div>
           </div>
@@ -369,8 +448,10 @@
                 <img loading="lazy" src="{{ url('images/exam_quiz_guy.webp') }}" height="220" width="220" alt="{{ app(\App\Settings\FeatureSettings::class)->feature3[0] }}" />
               </div>
               <div class="services-details d-grid">
-                <h3 class="text-center my-1 text-uppercase h4">{{ app(\App\Settings\FeatureSettings::class)->feature3[0] }}</h3>
-                <p class="my-2 text-center">{{ app(\App\Settings\FeatureSettings::class)->feature3[1] }}</p>
+                {{-- <h3 class="text-center my-1 text-uppercase h4">{{ app(\App\Settings\FeatureSettings::class)->feature3[0] }}</h3>
+                <p class="my-2 text-center">{{ app(\App\Settings\FeatureSettings::class)->feature3[1] }}</p> --}}
+                <h3 class="text-center text_primary_em my-1 text-uppercase h4">Real Exam Practice</h3>
+                <p class="my-2 text-center">Practice with real-style tests and resources designed for 11+ success.</p>
               </div>
             </div>
           </div>
@@ -378,8 +459,10 @@
             <div class="services_card service_child4 p-3 py-4 rounded-5 position-relative h-100">
               <div class="services_image position-relative mx-auto"><img loading="lazy" src="{{ url('images/learning_videos_guy.webp') }}" height="220" width="220" alt="{{ app(\App\Settings\FeatureSettings::class)->feature4[0] }}"></div>
               <div class="services-details d-grid">
-                <h3 class="text-center my-1 text-uppercase h4">{{ app(\App\Settings\FeatureSettings::class)->feature4[0] }}</h3>
-                <p class="my-2 text-center">{{ app(\App\Settings\FeatureSettings::class)->feature4[1] }}</p>
+                {{-- <h3 class="text-center my-1 text-uppercase h4">{{ app(\App\Settings\FeatureSettings::class)->feature4[0] }}</h3>
+                <p class="my-2 text-center">{{ app(\App\Settings\FeatureSettings::class)->feature4[1] }}</p> --}}
+                <h3 class="text-center text_secondary_em my-1 text-uppercase h4">Fun Learning Videos</h3>
+                <p class="my-2 text-center">Engaging video lessons that make learning easy, clear, and enjoyable.</p>
               </div>
             </div>
           </div>
@@ -388,12 +471,10 @@
     @endif
     <div class="journey_banner_section p-3 py-5 row align-items-center m-0">
       <div class="col-lg-8 col-md-6 col-sm-12 col-12 my-2 header_text_side">
-        <p class="mb-1 fs-5 fw-light text-white">Student portal!</p>
-        <h2 class="fw-bold h1 text-white">Detailed Journey Planner</h2>
-        <p class="paragraph_font fw-light text-white mb-4">With our comprehensive learning roadmap, students follow a well-organised educational path. We cover a wide range of topics and subtopics across each subject, providing engaging lessons, interactive activities, and support for a complete learning journey.</p>
-        <a aria-label="Explore Our Journey" href="{{ route('detailed_journey_planner') }}" class="border-2 mt-4 mt-lg-0 mt-md-2 p-2 position-relative px-4 rounded-2 rounded-pill secondary_btn z-1 z-index-top">
-          Explore Our Journey
-        </a>
+        <p class="fs_5 fw-medium mb-0 text-uppercase text_secondary">Detailed Journey Planner</p>
+        <h2 class="fw-bold h1 text-white mb-2">Learn, Practise and Reward</h2>
+        <p class="paragraph_font fw-light text-white mb-4">Our simple learning roadmap takes students step by step through the 11+ syllabus. Each subject is broken into clear topics and subtopics with fun lessons, interactive activities and full support along the way. Children complete levels as they learn and earn rewards for every step forward.</p>
+        <a aria-label="Explore Our Journey" href="{{ route('detailed_journey_planner') }}" class="border-2 mt-4 mt-lg-0 mt-md-2 p-2 position-relative px-4 rounded-2 rounded-pill secondary_btn z-1 z-index-top d-inline-flex align-items-center">Explore more</a>
       </div>
       <div class="col-lg-4 col-md-5 col-sm-12 col-12 my-2 align-items-center rounded-5 text-center position-relative journey_section_image_container">
         <img loading="lazy" src="{{ url('images/journey_header_image.webp') }}" class="position-absolute bottom-0 end-0 journey_section_image learning-image img-fluid" height="425" width="425" alt="journey guys image">
@@ -401,57 +482,51 @@
     </div>
     @if (app(\App\Settings\HomepageSettings::class)->enable_categories)
       <section class="categories_section py-4 my-5 container-lg container-md">
-        <h2 class="display-5 text-center fw-medium my-2">Our Year Groups</h2>
+        <h2 class="display-5 text-center fw-medium my-2">Programmes we offer</h2>
         <div class="heading_separator mx-auto rounded-pill mb-4"></div>
-        <p class="section_top_text fw-medium text-center my-1 category-text mt-4">
-            {{ app(\App\Settings\CategorySettings::class)->title }}</p>
-        <p class="fst-italic text-center my-1 mb-4">{{ app(\App\Settings\CategorySettings::class)->subtitle }}</p>
+        {{-- <p class="section_top_text fw-medium text-center my-1 category-text mt-4">{{ app(\App\Settings\CategorySettings::class)->title }}</p>
+        <p class="fst-italic text-center my-1 mb-4">{{ app(\App\Settings\CategorySettings::class)->subtitle }}</p> --}}
+        <p class="section_top_text fs_5 fw-medium text-center my-1 category-text mt-4">Learning made simple, every step of the way</p>
+        <p class="fst-italic fs_5 text-center my-1 mb-4">At TutorsElevenPlus, we offer structured programmes for each stage of your child’s education. With expert tutor guidance, interactive lessons and personalised support, we help students build confidence, grow skills and enjoy their learning journey.</p>
         <div class="row align-items-center justify-content-center py-4">
-          <div class="col-11 col-lg-3 col-md-6 col-sm-6 p-0 p-lg-2 p-md-2 p-sm-2">
-            <figure class="shape-box shape-box_half"><img loading="lazy"
-                    src="{{ url('images/year_3.webp') }}" height="auto" width="100%"
-                    alt="{{ app(\App\Settings\SiteSettings::class)->app_name }} year two">
-                <div class="brk-abs-overlay z-index-0 bg-black opacity-60"></div>
-                <figcaption>
-                    <div class="show-cont">
-                        <p class="card-no fw-semibold">YEAR 3</p>
-                    </div>
-                    <p class="card-content">Transitioning to complex topics in language, Maths, English,
-                        Verbal, Non-verbal Reasoning and encouraging critical thinking and problem-solving
-                        abilities</p><a aria-label="Explore Year 3" href="/explore/year-3"
-                        class="read-more-btn">Explore Year3</a>
-                </figcaption><span class="after"></span>
+          <div class="col-11 col-lg-4 col-md-6 col-sm-6 p-0 p-lg-2 p-md-2 p-sm-2">
+            <figure class="shape-box shape-box_half">
+              <img loading="lazy" src="{{ url('images/year_3.webp') }}" height="auto" width="100%" alt="{{ app(\App\Settings\SiteSettings::class)->app_name }} year two">
+              <div class="brk-abs-overlay z-index-0 bg-black opacity-60"></div>
+              <figcaption>
+                <div class="show-cont">
+                    <p class="card-no fw-semibold">YEAR 3</p>
+                </div>
+                <p class="card-content">Students begin moving into more complex topics across Maths, English, Verbal and Non-Verbal Reasoning. The focus is on building critical thinking and problem-solving skills</p>
+                <a aria-label="Explore Year 3" href="/explore/year-3" class="read-more-btn">Learn more</a>
+              </figcaption>
+              <span class="after"></span>
             </figure>
           </div>
-          <div class="col-11 col-lg-3 col-md-6 col-sm-6 p-0 p-lg-2 p-md-2 p-sm-2">
-            <figure class="shape-box shape-box_half"><img loading="lazy"
-                    src="{{ url('images/year_4.webp') }}" height="auto" width="100%"
-                    alt="{{ app(\App\Settings\SiteSettings::class)->app_name }} year three">
-                <div class="brk-abs-overlay z-index-0 bg-black opacity-60"></div>
-                <figcaption>
-                    <div class="show-cont">
-                        <p class="card-no fw-semibold">YEAR 4</p>
-                    </div>
-                    <p class="card-content">Exploring advanced language, Maths, English, Verbal, Non-verbal
-                        Reasoning and emphasizing independent thinking and creativity</p><a
-                        aria-label="Explore Year 4" href="/explore/year-4" class="read-more-btn">Explore
-                        Year4</a>
-                </figcaption><span class="after"></span>
+          <div class="col-11 col-lg-4 col-md-6 col-sm-6 p-0 p-lg-2 p-md-2 p-sm-2">
+            <figure class="shape-box shape-box_half">
+              <img loading="lazy" src="{{ url('images/year_4.webp') }}" height="auto" width="100%" alt="{{ app(\App\Settings\SiteSettings::class)->app_name }} year three">
+              <div class="brk-abs-overlay z-index-0 bg-black opacity-60"></div>
+              <figcaption>
+                <div class="show-cont">
+                    <p class="card-no fw-semibold">YEAR 4</p>
+                </div>
+                <p class="card-content">Children explore advanced concepts in Maths, English, Verbal and Non-Verbal Reasoning, while developing independent thinking and creativity</p>
+                <a aria-label="Explore Year 4" href="/explore/year-4" class="read-more-btn">Learn more</a>
+              </figcaption>
+              <span class="after"></span>
             </figure>
           </div>
-          <div class="col-11 col-lg-3 col-md-6 col-sm-6 p-0 p-lg-2 p-md-2 p-sm-2">
-            <figure class="shape-box shape-box_half"><img loading="lazy"
-                    src="{{ url('images/year_5.webp') }}" height="auto" width="100%"
-                    alt="{{ app(\App\Settings\SiteSettings::class)->app_name }} year five">
-                <div class="brk-abs-overlay z-index-0 bg-black opacity-60"></div>
-                <figcaption>
-                    <div class="show-cont">
-                        <p class="card-no fw-semibold">YEAR 5</p>
-                    </div>
-                    <p class="card-content">Comprehensive learning in language, Maths, English, Verbal,
-                        Non-verbal Reasoning and equipping students for higher education levels</p><a
-                        aria-label="Explore Year 5" href="/explore/year-5" class="read-more-btn">Explore
-                        Year5</a>
+          <div class="col-11 col-lg-4 col-md-6 col-sm-6 p-0 p-lg-2 p-md-2 p-sm-2">
+            <figure class="shape-box shape-box_half">
+              <img loading="lazy" src="{{ url('images/year_5.webp') }}" height="auto" width="100%" alt="{{ app(\App\Settings\SiteSettings::class)->app_name }} year five">
+              <div class="brk-abs-overlay z-index-0 bg-black opacity-60"></div>
+              <figcaption>
+                <div class="show-cont">
+                  <p class="card-no fw-semibold">YEAR 5</p>
+                </div>
+                <p class="card-content">A well-rounded programme covering Maths, English, Verbal and Non-Verbal Reasoning, designed to prepare students for higher levels of study and future challenges</p>
+                <a aria-label="Explore Year 5" href="/explore/year-5" class="read-more-btn">Learn more</a>
                 </figcaption><span class="after"></span>
             </figure>
           </div>
@@ -459,74 +534,73 @@
       </section>
     @endif
     @if (app(\App\Settings\HomepageSettings::class)->enable_testimonials)
-      <section class="testimonial_section py-3">
-        <h2 class="display-5 text-center text-white fw-medium mb-2 mt-4 px-2">
-            {{ app(\App\Settings\TestimonialSettings::class)->title }}</h2>
-        <div class="heading_separator mx-auto rounded-pill mb-4"></div>
-        <div class="swiper testimonialSwiper fixed_width p-2">
+      <section class="testimonial_section position-relative py-5">
+        <div class="section_top_shape_wave">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+              <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+          </svg>
+        </div>
+        {{-- <h2 class="display-5 text-center text-white fw-medium mb-2 mt-4 px-2">{{ app(\App\Settings\TestimonialSettings::class)->title }}</h2> --}}
+        <h2 class="display-5 text-center text-white fw-medium mb-2 mt-4 px-2">Kind words from parents</h2>
+        <div class="heading_separator mx-auto rounded-pill mb-1"></div>
+        <div class="swiper testimonialSwiper fixed_width p-2 mb-4">
           <div class="swiper-wrapper text-center">
               @for ($i = 1; $i <= 6; ++$i)
                   <div class="swiper-slide my-5 rounded-5">
                       <div class="testimonial_card my-4 p-3">
                           <div class="testimonial_image mx-auto">
-                              <img src="{{ app(\App\Settings\TestimonialSettings::class)->{"testimonial$i"}[3] }}"
-                                  height="100%" width="100%" class="test-image rounded-circle"
-                                  loading="lazy"
-                                  alt="{{ app(\App\Settings\TestimonialSettings::class)->{"testimonial$i"}[0] }}">
+                            <img src="{{ app(\App\Settings\TestimonialSettings::class)->{"testimonial$i"}[3] }}" height="100%" width="100%" class="test-image rounded-circle" loading="lazy" alt="{{ app(\App\Settings\TestimonialSettings::class)->{"testimonial$i"}[0] }}">
                           </div>
-                          <h3 class="testimonial_title h4 text-center pt-4">
-                              {{ app(\App\Settings\TestimonialSettings::class)->{"testimonial$i"}[0] }}</h3>
+                          <h3 class="testimonial_title h4 text-center pt-4">{{ app(\App\Settings\TestimonialSettings::class)->{"testimonial$i"}[0] }}</h3>
                           <hr class="my-2">
-                          <p class="fst-italic fw-light my-3 p-1 testimonial_text text-center">
-                              {{ app(\App\Settings\TestimonialSettings::class)->{"testimonial$i"}[2] }}</p>
-                          <p class="fs-5 fw-light text-primary-emphasis text-uppercase">
-                              voice&nbsp;of&nbsp;{{ app(\App\Settings\TestimonialSettings::class)->{"testimonial$i"}[1] }}
+                          <p class="fst-italic fw-light my-3 p-1 testimonial_text text-center">{{ app(\App\Settings\TestimonialSettings::class)->{"testimonial$i"}[2] }}</p>
+                          <p class="fs-5 fw-light text_secondary text-uppercase">voice&nbsp;of&nbsp;{{ app(\App\Settings\TestimonialSettings::class)->{"testimonial$i"}[1] }}
                           </p>
                       </div>
                   </div>
               @endfor
           </div>
         </div>
+        <div class="section_down_shape_wave">
+          <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+          </svg>
+        </div>
       </section>
     @endif
-    <section class="get_stared_section col-lg-10 col-md-12 col-sm-12 col-12 py-4 pb-0 row m-0 mx-auto">
-      <div class="align-self-center col-12 col-lg-5 col-md-6 col-sm-12 text-center">
-        <img loading="lazy" src="images/discovertutor.webp" alt="discover {{ app(\App\Settings\SiteSettings::class)->app_name }}" height="100%" width="100%" class="responsive_image">
-      </div>
-      <div class="col-lg-7 col-md-6 col-sm-12 col-12 p-3">
-        <h2 class="display-4 fw-medium text-uppercase">Jumpstart your 11+ learning today!</h2>
-        <div class="heading_separator rounded-pill mb-4"></div>
-        <p class="fs-5 fw-light my-4 paragraph_font">Ready to excel in your 11+ exams? Begin your learning journey
-            today with {{ app(\App\Settings\SiteSettings::class)->app_name }}! Our innovative platform offers
-            engaging lessons and interactive practice sessions designed for your success. Whether it’s enhancing
-            your verbal and non-verbal reasoning or tackling challenging maths problems, we provide the support you
-            need every step of the way. Start your 11+ preparation now and confidently move towards exam success.
-        </p><a aria-label="{{ app(\App\Settings\HeroSettings::class)->cta_text }}"
-              href="{{ app(\App\Settings\HeroSettings::class)->cta_link }}"
-              class="border-0 my-2 p-2 px-4 rounded-5 secondary_btn text-decoration-none">{{ app(\App\Settings\HeroSettings::class)->cta_text }}</a>
+    <section class="get_stared_section py-4 pb-0">
+      <div class="container-lg cont_wrapper">
+        <div class="row m-0">
+          <div class="align-self-center col-12 col-lg-5 col-md-6 col-sm-12 text-center">
+            <img loading="lazy" src="images/discovertutor.webp" alt="discover {{ app(\App\Settings\SiteSettings::class)->app_name }}" height="100%" width="100%" class="responsive_image">
+          </div>
+          <div class="col-lg-7 col-md-6 col-sm-12 col-12 p-3">
+            <h2 class="display-5 fw-medium mb-3">Step into smarter 11+ learning environment</h2>
+            <div class="heading_separator rounded-pill mb-4"></div>
+            <p class="fs-5 fw-light my-4 paragraph_font">Get ready to shine in your 11+ exams with TutorsElevenPlus. Our platform offers fun lessons, interactive practice and step-by-step support from expert tutors. From verbal and non-verbal reasoning to tricky maths problems and advanced English skills, we make learning simple, enjoyable and highly effective. Start your 11+ preparation today and move forward with confidence towards success.</p>
+            <a aria-label="{{ app(\App\Settings\HeroSettings::class)->cta_text }}" href="{{ app(\App\Settings\HeroSettings::class)->cta_link }}" class="border-0 my-2 p-2 px-4 rounded-5 secondary_btn text-white text-decoration-none">{{ app(\App\Settings\HeroSettings::class)->cta_text }}</a>
+          </div>
+        </div>
       </div>
     </section>
     <section class="contact_section row align-items-center col-lg-11 col-12 mx-auto py-3">
       <div class="col-lg-7 col-md-6 col-sm-12 col-12 my-3">
-          <p class="fs-6 fw-medium mb-0 text-uppercase text_primary">Contact
-              {{ app(\App\Settings\SiteSettings::class)->app_name }}</p>
-          <h2 class="display-5 fw-medium mb-3 my-2 text-capitalize">Looking For Guidance!</h2>
-          <p class="paragraph_font fw-light">We're here to help and guide your child through their education. If you
-              have any questions about the 11+ tests, applying to senior school, or navigating Key Stage 2, don't
-              hesitate to ask our expert 11 tutors. Our dedicated team is committed to making your journey smooth and
-              successful. We understand the importance of personalized support and are ready to provide the guidance
-              your child needs to excel in their academic pursuits.</p>
+          <p class="fs_5 fw-medium mb-0 text-uppercase text_primary">Contact {{ app(\App\Settings\SiteSettings::class)->app_name }}</p>
+          <h2 class="display-5 fw-medium mb-3 my-2 text-capitalize">Guiding the Way to Success</h2>
+          <p class="paragraph_font fw-light">We’re here to support your child throughout their learning journey. Whether it’s understanding the 11+ exams, applying to senior schools or navigating Key Stage 2, our expert tutors are ready to help. With personalised support and a caring approach, we make the process simple, smooth and stress-free. Our goal is to give your child the confidence and guidance they need to succeed.</p>
           <p class="fw-medium m-0 text-uppercase">Connect with us:</p>
           <ul class="p-0 m-0 contact_keys_section position-relative mb-4">
-              <li class="paragraph_font my-2 d-flex align-items-center fw-light"><i
-                      class="fa-solid fa-circle-check text_secondary paragraph_font me-2"></i><span
-                      class="m-0">Livechat</span></li>
-              <li class="paragraph_font my-2 d-flex align-items-center fw-light"><i
-                      class="fa-solid fa-circle-check text_secondary paragraph_font me-2"></i><span
-                      class="m-0">Mail us&nbsp;<a
-                          href="mailto:contact@tutorselevenplus.co.uk">contact@tutorselevenplus.co.uk</a></span></li>
-          </ul><a aria-label="Contact Us" href="/contact"
-              class="border-0 p-2 px-4 rounded-5 secondary_btn text-decoration-none">Contact Us</a>
+              <li class="paragraph_font my-2 d-flex align-items-center fw-light">
+                <i class="fa-solid fa-circle-check text_secondary paragraph_font me-2"></i>
+                <span class="m-0">Livechat</span>
+              </li>
+              <li class="paragraph_font my-2 d-flex align-items-center fw-light">
+                <i class="fa-solid fa-circle-check text_secondary paragraph_font me-2"></i>
+                <span class="m-0">Mail us&nbsp;
+                  <a href="mailto:contact@tutorselevenplus.co.uk">contact@tutorselevenplus.co.uk</a></span>
+                </li>
+          </ul>
+          <a aria-label="Contact Us" href="/contact" class="border-0 p-2 px-4 rounded-5 secondary_btn text-decoration-none text-white">Contact Us</a>
       </div>
       <div class="col-lg-5 col-md-6 col-sm-12 col-12 my-3 pt-2 justify-content-center d-flex">
         <img loading="lazy" src="{{ url('images/contact_section_isometric.webp') }}" alt="contact {{ app(\App\Settings\SiteSettings::class)->app_name }}" class="learning-image img-fluid" width="500" height="500">
@@ -536,7 +610,7 @@
     @include('components.pricing')
     <section class="faq_section fixed_width">
       <div class="faq_section_container p-lg-5 p-md-3 p-1 pt-2 rounded-3 shadow mx-2">
-        <h2 class="h1 text-capitalize px-2 mt-4">Questions? Get Answers</h2>
+        <h2 class="h1 text-capitalize px-2 mt-4">Have queries? Get answers</h2>
         <div class="heading_separator mb-4 px-1 rounded"></div>
         <div class="row align-items-center m-0">
             <div class="col-lg-8 col-md-7 col-sm-12 col-12">
@@ -652,11 +726,11 @@
             }
         });
         $("#switch_plan_duration_btn").click((function() {
-            $(this).is(":checked") ? ($(".monthly_plan_button").removeClass("text-primary-emphasis"), $(
-                    ".yearly_plan_button").addClass("text-primary-emphasis"), $(".pricing-card.yearly")
+            $(this).is(":checked") ? ($(".monthly_plan_button").removeClass("text_primary"), $(
+                    ".yearly_plan_button").addClass("text_primary"), $(".pricing-card.yearly")
                 .removeClass("d-none"), $(".pricing-card.monthly").addClass("d-none")) : ($(
-                    ".yearly_plan_button").removeClass("text-primary-emphasis"), $(".monthly_plan_button")
-                .addClass("text-primary-emphasis"), $(".pricing-card.yearly").addClass("d-none"), $(
+                    ".yearly_plan_button").removeClass("text_primary"), $(".monthly_plan_button")
+                .addClass("text_primary"), $(".pricing-card.yearly").addClass("d-none"), $(
                     ".pricing-card.monthly").removeClass("d-none"))
         }));
     </script>

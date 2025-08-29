@@ -29,7 +29,10 @@ footer a {
 
 :root {
     --primary: #A8229C;
+    --dark_primary: #a01594;
+    --primary_em: #5f255a;
     --secondary: #F8B55F;
+    --secondary_em: #b97013;
     --navbar-secondary: #F8B55F;
     --dark_secondary: #ffb759;
     --cta_primary: #F8E7F6;
@@ -46,6 +49,23 @@ footer a {
     --linkedin: #003f91;
     --youtube: #ff1010;
     --twitter: #00aeff
+}
+
+/* default  */
+.fs_5 {
+    font-size: 1.15rem !important;
+}
+
+/* text  */
+
+.text_primary_em {
+    color: var(--primary_em) !important;
+    fill: var(--primary_em) !important;
+}
+
+.text_secondary_em {
+    color: var(--secondary_em) !important;
+    fill: var(--secondary_em) !important;
 }
 
 .text_secondary {
@@ -273,7 +293,7 @@ button.nav-link {
 }
 
 .footer_section {
-    background: var(--primary)
+    background: var(--dark_primary)
 }
 
 .footer_list_item a {
@@ -367,7 +387,7 @@ button.nav-link {
 }
 
 .journey_banner_section {
-    background: radial-gradient(#47c36d, #1d7237)
+    background: radial-gradient(#cd47c1, #99128d);
 }
 
 .journey_section_image_container {
@@ -427,7 +447,9 @@ a {
     height: auto;
     width: auto;
     margin: 4rem auto;
-    background: radial-gradient(#147bff, #0071f6)
+    /* background: radial-gradient(#147bff, #0071f6); */
+    background: radial-gradient(#cd47c1, #99128d);
+
 }
 
 .testimonialSwiper {
@@ -439,7 +461,10 @@ a {
     margin-top: 20px;
     min-height: 400px;
     max-height: fit-content;
-    width: auto
+    width: auto;
+    background: #cc71c4b8;
+    backdrop-filter: blur(8px);
+    box-shadow: inset 0px 0 14px 3px #b35cab !important;
 }
 
 .testimonialSwiper .swiper-slide img {
@@ -448,8 +473,9 @@ a {
     object-fit: cover
 }
 
-.testimonial_title {
-    color: #000 !important
+.testimonial_title,
+.testimonial_text {
+    color: var(--cta_primary) !important
 }
 
 .contact_section,
@@ -483,22 +509,31 @@ a {
 .subscribe-form input,
 .newletter_form input {
     width: 100%;
-    padding: 14px 28px;
-    /* color: #fff; */
-}
-
-.newletter_form_input {
     padding: 16px 30px !important;
     background: #e7a3e166 !important;
     color: var(--white) !important;
     box-shadow: none !important;
 }
 
-.newletter_form_input::placeholder {
+.subscribe-form input {
+    padding: 16px 18px !important;
+}
+
+/* ..subscribe-form input,
+.newletter_form input {
+    padding: 16px 30px !important;
+    background: #e7a3e166 !important;
+    color: var(--white) !important;
+    box-shadow: none !important;
+} */
+
+.subscribe-form input::placeholder,
+.newletter_form input::placeholder {
     color: var(--cta_primary) !important;
 }
 
-.newletter_form_input:focus {
+.subscribe-form input:focus,
+.newletter_form input:focus {
     border-color: var(--cta_primary) !important;
 }
 
@@ -675,19 +710,19 @@ a {
 }
 
 .service_child1 {
-    background: #bbd1f4
+    background: #ffe1fc !important
 }
 
 .service_child2 {
-    background: #ffe5c2
+    background: #fdf6de !important
 }
 
 .service_child3 {
-    background: #d2cdc7
+    background: #ffe1fc !important
 }
 
 .service_child4 {
-    background: #ffc747
+    background: #fdf6de !important
 }
 
 .header_heading {

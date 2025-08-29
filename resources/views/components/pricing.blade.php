@@ -2,29 +2,38 @@
     <style>
         .planChanger:focus{
             --bs-form-switch-bg: url('https://cdn-icons-png.flaticon.com/512/5111/5111178.png') !important;
-            border-color: #f6c774;
+            border-color: var(--secondary);
         }
         .planChanger:checked {
-            background-color: #f3ba4b;
-            border-color: #f6c774;
+            background-color: var(--secondary);
+            border-color: var(--secondary);
             --bs-form-switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e") !important;
         }
+        .pricing-section {
+            position: relative;
+            background: #FFE1FC
+        }
     </style>
-    <section class="pricing-section py-2">
+    <section class="pricing-section py-5">
+        <div class="section_top_shape_wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
         <div class="fixed_width position-relative z-1">
             <div class="mt-4">
-                <h2 class="display-5 text-center fw-medium my-2 px-2">Discover Affordable Brilliance</h2>
+                <h2 class="display-5 text-center fw-medium my-2 px-2">Pricing & Plans</h2>
                 <div class="heading_separator mb-4 mx-auto"></div>
+                <p class="fs_5 text-center text-dark fst-italic">Choose the ideal plan to support your child's educational journey.</p>
                 <div class="d-flex align-items-center justify-content-center my-3">
-                    <h3 class="text-center fw-semibold monthly_plan_button text-primary-emphasis m-0">Monthly Plans</h3>
+                    <h4 class="text-center fw-medium monthly_plan_button text_primary m-0">Monthly Plans</h4>
                     <div class="form-check form-switch fs-4 ms-3">
                         <input class="form-check-input shadow-none planChanger" type="checkbox" role="switch" id="switch_plan_duration_btn" aria-labelledby="yearlyPlanLabel">
                     </div>
-                    <h3 class="h2 text-center fw-semibold yearly_plan_button m-0" id="yearlyPlanLabel">Yearly Plans</h3>                    
+                    <h4 class="text-center fw-medium yearly_plan_button m-0" id="yearlyPlanLabel">Yearly Plans</h4>                    
                 </div>
-                <p class="fs-5 text-center text-dark">Choose the ideal plan to support your child's educational journey.</p>
             </div>
-            <div class="row align-items-center justify-content-center m-0 my-4">
+            <div class="row align-items-center justify-content-center m-0 my-4 mb-5">
                 @foreach ($pricing_categories as $category)
                     @foreach ($category['plans'] as $pkey => $plan)
                         <div class="col-12 col-lg-4 col-md-6 col-sm-8 pricing-card
@@ -44,10 +53,8 @@
                                                 class="badge pricing-badges-second rounded-5 m-3 p-2 text-uppercase">{{ $category['name'] }}</span>
                                         </div>
                                         @if ($plan['popular'])
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                                                <div
-                                                    class="badge pricing-badges-second rounded-5 m-3 p-2 ms-lg-5 ms-md-4 text-uppercase text-end">
-                                                    popular</div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6 col-6 text-end">
+                                                <div class="badge pricing-badges-second rounded-5 m-3 p-2 text-uppercase">popular</div>
                                             </div>
                                         @endif
                                     </div>
@@ -102,6 +109,10 @@
                 @endforeach
             </div>
         </div>
-        <img src="{{ url('images/pricing-cards-bg.webp') }}" loading="lazy" height="100%" width="100%" alt="pricing section banner" class="pricingSectionImg">
+        <div class="section_down_shape_wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
     </section>
 @endif
