@@ -93,7 +93,6 @@ a.read-more {
 .outlined_secondary_btn,
 .primary_btn,
 .secondary_btn {
-    color: #0C294C;
     transition: .25s;
     box-shadow: 0 8px 11px 0 #00000057
 }

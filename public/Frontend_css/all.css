@@ -97,6 +97,10 @@ footer a {
     color: var(--secondary) !important
 }
 
+.text_cta_primary {
+    color: var(--cta_primary) !important
+}
+
 .curve,
 .text_primary {
     color: var(--primary) !important
