@@ -122,7 +122,7 @@
                   </div>
                 </div>
                 <div class="col-lg-6 mt-lg-5 text-center">
-                  <img src="{{ url('images/index_header_image.webp') }}" alt="{{ app(\App\Settings\SiteSettings::class)->app_name }} header image" class="header_image" height="100%" width="100%">
+                  <img src="{{ url('images/index_header_image.png') }}" alt="{{ app(\App\Settings\SiteSettings::class)->app_name }} header image" class="header_image" height="100%" width="100%">
                 </div>
               </div>
             </div>
@@ -183,7 +183,7 @@
     @if (app(\App\Settings\HomepageSettings::class)->enable_features)
       <section class="about_section fixed_width row align-items-center mx-auto col-lg-11 col-md-12">
         <div class="col-lg-4 col-md-6 col-sm-12 col-10 mx-auto text-center">
-          <img loading="lazy" src="images/about_boy_image.webp" alt="about us mockup" class="learning-image img-fluid" width="373" height="373">
+          <img loading="lazy" src="images/about_boy_image.png" alt="about us mockup" class="learning-image img-fluid" width="373" height="373">
         </div>
         <div class="col-lg-8 col-md-6 col-sm-12 col-12">
           <p class="fs_5 fw-medium mb-0 text-uppercase text_primary">What is {{ app(\App\Settings\SiteSettings::class)->app_name }}</p>
@@ -215,7 +215,7 @@
           <div class="col-lg-3 col-md-5 col-sm-6 col-12 p-lg-2 p-md-2 p-1 mb-lg-0 mb-5">
             <div class="services_card service_child1 p-3 py-4 rounded-5 position-relative h-100">
               <div class="services_image position-relative mx-auto">
-                <img loading="lazy" src="{{ url('images/top_quality_question_guy.webp') }}" height="220" width="220" alt="{{ app(\App\Settings\FeatureSettings::class)->feature1[0] }}" />
+                <img loading="lazy" src="{{ url('images/top_quality_question_guy.png') }}" height="220" width="220" alt="{{ app(\App\Settings\FeatureSettings::class)->feature1[0] }}" />
               </div>
               <div class="services-details d-grid">
                 {{-- <h3 class="text-center my-1 text-uppercase h4">{{ app(\App\Settings\FeatureSettings::class)->feature1[0] }}</h3>
@@ -228,7 +228,7 @@
           <div class="col-lg-3 col-md-5 col-sm-6 col-12 p-lg-2 p-md-2 p-1 mb-lg-0 mb-5">
             <div class="services_card service_child2 p-3 py-4 rounded-5 position-relative h-100">
               <div class="services_image position-relative mx-auto">
-                <img loading="lazy" src="{{ url('images/detail_analysis_guy.webp') }}" height="220" width="220" alt="{{ app(\App\Settings\FeatureSettings::class)->feature2[0] }}" />
+                <img loading="lazy" src="{{ url('images/detail_analysis_guy.png') }}" height="220" width="220" alt="{{ app(\App\Settings\FeatureSettings::class)->feature2[0] }}" />
               </div>
               <div class="services-details d-grid">
                 {{-- <h3 class="text-center my-1 text-uppercase h4">{{ app(\App\Settings\FeatureSettings::class)->feature2[0] }}</h3>
@@ -241,7 +241,7 @@
           <div class="col-lg-3 col-md-5 col-sm-6 col-12 p-lg-2 p-md-2 p-1 mb-lg-0 mb-5">
             <div class="services_card service_child3 p-3 py-4 rounded-5 position-relative h-100">
               <div class="services_image position-relative mx-auto">
-                <img loading="lazy" src="{{ url('images/exam_quiz_guy.webp') }}" height="220" width="220" alt="{{ app(\App\Settings\FeatureSettings::class)->feature3[0] }}" />
+                <img loading="lazy" src="{{ url('images/exam_quiz_guy.png') }}" height="220" width="220" alt="{{ app(\App\Settings\FeatureSettings::class)->feature3[0] }}" />
               </div>
               <div class="services-details d-grid">
                 {{-- <h3 class="text-center my-1 text-uppercase h4">{{ app(\App\Settings\FeatureSettings::class)->feature3[0] }}</h3>
@@ -253,7 +253,7 @@
           </div>
           <div class="col-lg-3 col-md-5 col-sm-6 col-12 p-lg-2 p-md-2 p-1 mb-lg-0 mb-5">
             <div class="services_card service_child4 p-3 py-4 rounded-5 position-relative h-100">
-              <div class="services_image position-relative mx-auto"><img loading="lazy" src="{{ url('images/learning_videos_guy.webp') }}" height="220" width="220" alt="{{ app(\App\Settings\FeatureSettings::class)->feature4[0] }}"></div>
+              <div class="services_image position-relative mx-auto"><img loading="lazy" src="{{ url('images/learning_videos_guy.png') }}" height="220" width="220" alt="{{ app(\App\Settings\FeatureSettings::class)->feature4[0] }}"></div>
               <div class="services-details d-grid">
                 {{-- <h3 class="text-center my-1 text-uppercase h4">{{ app(\App\Settings\FeatureSettings::class)->feature4[0] }}</h3>
                 <p class="my-2 text-center">{{ app(\App\Settings\FeatureSettings::class)->feature4[1] }}</p> --}}
@@ -273,7 +273,7 @@
         <a aria-label="Explore Our Journey" href="{{ route('detailed_journey_planner') }}" class="border-2 mt-4 mt-lg-0 mt-md-2 p-2 position-relative px-4 rounded-2 rounded-pill secondary_btn z-1 z-index-top d-inline-flex align-items-center">Explore more</a>
       </div>
       <div class="col-lg-4 col-md-5 col-sm-12 col-12 my-2 align-items-center rounded-5 text-center position-relative journey_section_image_container">
-        <img loading="lazy" src="{{ url('images/journey_header_image.webp') }}" class="position-absolute bottom-0 end-0 journey_section_image learning-image img-fluid" height="425" width="425" alt="journey guys image">
+        <img loading="lazy" src="{{ url('images/journey_header_image.png') }}" class="position-absolute bottom-0 end-0 journey_section_image learning-image img-fluid" height="425" width="425" alt="journey guys image">
       </div>
     </div>
     @if (app(\App\Settings\HomepageSettings::class)->enable_categories)
@@ -287,7 +287,7 @@
         <div class="row align-items-center justify-content-center py-4">
           <div class="col-11 col-lg-4 col-md-6 col-sm-6 p-0 p-lg-2 p-md-2 p-sm-2">
             <figure class="shape-box shape-box_half">
-              <img loading="lazy" src="{{ url('images/year_3.webp') }}" height="auto" width="100%" alt="{{ app(\App\Settings\SiteSettings::class)->app_name }} year two">
+              <img loading="lazy" src="{{ url('images/year_3.png') }}" height="auto" width="100%" alt="{{ app(\App\Settings\SiteSettings::class)->app_name }} year two">
               <div class="brk-abs-overlay z-index-0 bg-black opacity-60"></div>
               <figcaption>
                 <div class="show-cont">
@@ -301,7 +301,7 @@
           </div>
           <div class="col-11 col-lg-4 col-md-6 col-sm-6 p-0 p-lg-2 p-md-2 p-sm-2">
             <figure class="shape-box shape-box_half">
-              <img loading="lazy" src="{{ url('images/year_4.webp') }}" height="auto" width="100%" alt="{{ app(\App\Settings\SiteSettings::class)->app_name }} year three">
+              <img loading="lazy" src="{{ url('images/year_4.png') }}" height="auto" width="100%" alt="{{ app(\App\Settings\SiteSettings::class)->app_name }} year three">
               <div class="brk-abs-overlay z-index-0 bg-black opacity-60"></div>
               <figcaption>
                 <div class="show-cont">
@@ -315,7 +315,7 @@
           </div>
           <div class="col-11 col-lg-4 col-md-6 col-sm-6 p-0 p-lg-2 p-md-2 p-sm-2">
             <figure class="shape-box shape-box_half">
-              <img loading="lazy" src="{{ url('images/year_5.webp') }}" height="auto" width="100%" alt="{{ app(\App\Settings\SiteSettings::class)->app_name }} year five">
+              <img loading="lazy" src="{{ url('images/year_5.png') }}" height="auto" width="100%" alt="{{ app(\App\Settings\SiteSettings::class)->app_name }} year five">
               <div class="brk-abs-overlay z-index-0 bg-black opacity-60"></div>
               <figcaption>
                 <div class="show-cont">
@@ -368,7 +368,7 @@
       <div class="container-lg cont_wrapper">
         <div class="row m-0">
           <div class="align-self-center col-12 col-lg-5 col-md-6 col-sm-12 text-center">
-            <img loading="lazy" src="images/discovertutor.webp" alt="discover {{ app(\App\Settings\SiteSettings::class)->app_name }}" height="100%" width="100%" class="responsive_image">
+            <img loading="lazy" src="images/discovertutor.png" alt="discover {{ app(\App\Settings\SiteSettings::class)->app_name }}" height="100%" width="100%" class="responsive_image">
           </div>
           <div class="col-lg-7 col-md-6 col-sm-12 col-12 p-3">
             <h2 class="display-5 fw-medium mb-3">Step into smarter 11+ learning environment</h2>
@@ -399,7 +399,7 @@
           <a aria-label="Contact Us" href="/contact" class="border-0 p-2 px-4 rounded-5 secondary_btn text-decoration-none text-white">Contact Us</a>
       </div>
       <div class="col-lg-5 col-md-6 col-sm-12 col-12 my-3 pt-2 justify-content-center d-flex">
-        <img loading="lazy" src="{{ url('images/contact_section_isometric.webp') }}" alt="contact {{ app(\App\Settings\SiteSettings::class)->app_name }}" class="learning-image img-fluid" width="500" height="500">
+        <img loading="lazy" src="{{ url('images/contact_section_isometric.png') }}" alt="contact {{ app(\App\Settings\SiteSettings::class)->app_name }}" class="learning-image img-fluid" width="500" height="500">
       </div>
     </section>
     <!-- subscribe  -->
@@ -462,7 +462,7 @@
                 </ul>
             </div>
             <div class="col-lg-4 col-md-5 col-sm-12 col-12 d-flex justify-content-center"><img loading="lazy"
-                    src="{{ url('images/faq_section.webp') }}" alt="3d faq image" height="283" width="377"
+                    src="{{ url('images/faq_section.png') }}" alt="3d faq image" height="283" width="377"
                     class="learning-image img-fluid"></div>
         </div>
       </div>
