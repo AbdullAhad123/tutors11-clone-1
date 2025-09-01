@@ -157,10 +157,6 @@ footer a {
     border: 2px solid var(--dark_secondary);
 }
 
-.primary_btn:hover {
-    scale: 1.08
-}
-
 .outlined_secondary_btn {
     background: 0 0 !important;
     border: 2px solid var(--secondary)
@@ -181,7 +177,12 @@ footer a {
 
 .primary_btn {
     background: var(--primary);
-    border-radius: 15px
+    border-radius: 6px;
+    border: none;
+}
+
+.primary_btn:hover {
+    background: var(--dark_primary);
 }
 
 .absolute_nav {

@@ -1,4 +1,5 @@
-@include('components.website-preloader')<nav class="navbar navbar-expand-lg absolute_nav" id="navbar_nav">
+@include('components.website-preloader')
+<nav class="navbar navbar-expand-lg absolute_nav" id="navbar_nav">
     <div class="container-lg cont_wrapper py-1 px-2 px-md-4">
         <a class="m-0 navbar-brand p-0 me-lg-4" href="/">
             <img src="{{ url('storage/' . app(\App\Settings\SiteSettings::class)->logo_path) }}" width="45" height="45" class="img-fluid" alt="{{ url('storage/' . app(\App\Settings\SiteSettings::class)->app_name) }}" />
