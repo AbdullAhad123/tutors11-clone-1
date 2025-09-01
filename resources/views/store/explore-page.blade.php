@@ -149,7 +149,7 @@
                     <div class="row align-items-center justify-content-center py-4">
                         <div class="col-11 col-lg-4 col-md-6 col-sm-6 p-0 p-lg-2 p-md-2 p-sm-2">
                             <figure class="shape-box shape-box_half">
-                                <img loading="lazy" src="{{ url('images/year_3.webp') }}" height="auto" width="100%" alt="{{ app(\App\Settings\SiteSettings::class)->app_name }} year two">
+                                <img loading="lazy" src="{{ url('images/year_3.png') }}" height="auto" width="100%" alt="{{ app(\App\Settings\SiteSettings::class)->app_name }} year two">
                                 <div class="brk-abs-overlay z-index-0 bg-black opacity-60"></div>
                                 <figcaption>
                                     <div class="show-cont">
@@ -163,7 +163,7 @@
                         </div>
                         <div class="col-11 col-lg-4 col-md-6 col-sm-6 p-0 p-lg-2 p-md-2 p-sm-2">
                             <figure class="shape-box shape-box_half">
-                                <img loading="lazy" src="{{ url('images/year_4.webp') }}" height="auto" width="100%" alt="{{ app(\App\Settings\SiteSettings::class)->app_name }} year three">
+                                <img loading="lazy" src="{{ url('images/year_4.png') }}" height="auto" width="100%" alt="{{ app(\App\Settings\SiteSettings::class)->app_name }} year three">
                                 <div class="brk-abs-overlay z-index-0 bg-black opacity-60"></div>
                                 <figcaption>
                                     <div class="show-cont">
@@ -177,7 +177,7 @@
                         </div>
                         <div class="col-11 col-lg-4 col-md-6 col-sm-6 p-0 p-lg-2 p-md-2 p-sm-2">
                             <figure class="shape-box shape-box_half">
-                                <img loading="lazy" src="{{ url('images/year_5.webp') }}" height="auto" width="100%" alt="{{ app(\App\Settings\SiteSettings::class)->app_name }} year five">
+                                <img loading="lazy" src="{{ url('images/year_5.png') }}" height="auto" width="100%" alt="{{ app(\App\Settings\SiteSettings::class)->app_name }} year five">
                                 <div class="brk-abs-overlay z-index-0 bg-black opacity-60"></div>
                                 <figcaption>
                                     <div class="show-cont">

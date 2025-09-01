@@ -11,9 +11,9 @@
     <meta name="keywords" content="{{$school->keywords ? $school->keywords : app(\App\Settings\KeywordsSettings::class)->keywords['school_keywords']}}">
     <link rel="canonical" href="{{ url()->current() }}"/>
 	<link rel="alternate" href="{{ url()->current() }}" hreflang="en-gb">
-
     <meta name="author" content="{{ app(\App\Settings\SiteSettings::class)->app_name }}">
     <link rel="icon" href="{{ url('storage/'.app(\App\Settings\SiteSettings::class)->favicon_path) }}">
+    <link rel="preload" href="{{url('Frontend_css/all.css')}}" as="style">
     <link rel="preload" href="{{url('Frontend_css/style.css')}}" as="style">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" as="style">
     <link rel="preconnect" href="https://googleads.g.doubleclick.net">
@@ -22,6 +22,7 @@
     <link rel="preconnect" href="https://www.google-analytics.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500&display=swap">
+    <link rel="stylesheet" href="{{url('Frontend_css/all.css')}}" />
     <link rel="stylesheet" href="{{url('Frontend_css/style.css')}}" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
@@ -30,6 +31,9 @@
         #map {height: 300px;}
         .school_item_detail {
             margin-top: 6rem
+        }
+        a {
+            color: var(--primary) !important
         }
     </style>
 </head>
@@ -65,7 +69,7 @@
                         </div>
                     @endif
                     @if($school->whats_on_school)
-                        <div class="my-3 bg-primary text-white rounded-1 p-4">
+                        <div class="my-3 bg_primary text-white rounded-1 p-4">
                             <h2 class="text-capitalize">What's on the {{$school->name}} 11 plus?</h2>
                             <div style="color:#ffffff !important;">{!!$school->whats_on_school!!}</div>
                         </div>
@@ -266,7 +270,7 @@
                         </a> 
                         <div class="collapse  d-lg-block " id="collapseWidthExample">
                             <div class="p-1 d-lg-block d-none">
-                                <a class="text-primary fw-light">Regions</a>
+                                <a class="fw-light">Regions</a>
                             </div>
                             @foreach($regions as $key => $region)
                                 <div class="p-1">
