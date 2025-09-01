@@ -12,6 +12,7 @@
    <link rel="canonical" href="{{ url()->current() }}"/>
    <link rel="alternate" href="{{ url()->current() }}" hreflang="en-gb">
    <!-- preload links  -->
+   <link rel="preload" href="{{url('Frontend_css/all.css')}}" as="style">
    <link rel="preload" href="{{url('Frontend_css/style.css')}}" as="style">
    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" as="style">
    <link rel="preconnect" href="https://googleads.g.doubleclick.net">
@@ -20,6 +21,7 @@
    <link rel="preconnect" href="https://www.google-analytics.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500&display=swap">
+   <link rel="stylesheet" href="{{url('Frontend_css/all.css')}}" />
    <link rel="stylesheet" href="{{url('Frontend_css/style.css')}}" />
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -66,15 +68,15 @@
                   @else
                      <p class="fs-5 fw-light header_heading my-2 text-white">The categories for our Year 5 platform are an invaluable source of learning in preparation for any upcoming exams. Children have the opportunity to learn and master new topics, enhance their skills, and still have fun!</p>
                   @endif
+                  <a href="{{ route('regis_form') }}" class="border-0 mt-3 d-inline-flex px-4 py-2 rounded-pill secondary_btn">Get Started</a>
                </div>
-               <div class="col-lg-7 col-md-6 col-sm-12 col-12 text-center"><img src="{{url('images/child_portal_header.png')}}" height="auto" width="450" class="img-fluid" alt="explore {{ $category['name'] }}"></div>
+               <div class="col-lg-7 col-md-6 col-sm-12 col-12 text-center">
+                  <img src="{{url('images/child_portal_header.png')}}" height="auto" width="450" class="img-fluid" alt="explore {{ $category['name'] }}">
+               </div>
             </div>
          </div>
       </header>
    </section>
-   <div class="getStartedFixedBtn">
-    <a href="{{ route('regis_form') }}" class="border-0 d-inline-flex px-4 py-2 rounded-pill secondary_btn">Get Started</a>
-</div>
 
    <div class="category_section py-5 fixed_width">
       <div class="section_heading mb-lg-4 mb-md-4 mb-2">

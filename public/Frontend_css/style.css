@@ -253,13 +253,6 @@ html {
     background: linear-gradient(180deg, var(--primary), #0039a1)
 }
 
-.footer_bg_facebook:hover,
-.footer_bg_linkedin:hover,
-.footer_bg_twitter:hover,
-.footer_bg_youtube:hover {
-    background: #fff !important
-}
-
 .subject_cards_container {
     justify-content: space-between;
     position: -webkit-sticky
@@ -1115,29 +1108,6 @@ a {
 .subscribe-form {
     position: relative;
     overflow: hidden
-}
-
-.subscribe-form input {
-    width: 100%;
-    padding: 14px 28px;
-    color: #fff
-}
-
-.subscribe-form button {
-    position: absolute;
-    right: 0;
-    background: #ff9d0b;
-    padding: 14px 18px;
-    border: 1px solid #ff9d0b;
-    top: 0;
-    border-bottom-right-radius: 8px;
-    border-top-right-radius: 8px
-}
-
-.subscribe-form button i {
-    color: #fff;
-    font-size: 22px;
-    transform: rotate(-6deg)
 }
 
 .copyright-area {
@@ -2904,7 +2874,7 @@ question_item .container-faq {
 }
 
 .card1 {
-    background-color: #ffe6cc;
+    background-color: var(--lighter_primary);
     margin: 12px;
     text-decoration: none;
     z-index: 0;
@@ -2923,7 +2893,7 @@ question_item .container-faq {
 }
 
 .card1 .icon {
-    color: #45a9ff
+    color: var(--primary)
 }
 
 .pricing .price-card-background {
@@ -3121,7 +3091,7 @@ question_item .container-faq {
 .contact_form_section {
     height: auto;
     width: auto;
-    background: radial-gradient(#51aaff, #2696ff, #005ccd);
+    background: radial-gradient(#d860ce, #8f0283);
     margin: 5rem auto
 }
 

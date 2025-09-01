@@ -331,7 +331,7 @@ button.nav-link {
 }
 
 .footer_list_item a {
-    color: var(--white);
+    color: var(--white) !important;
     transition: .3s;
     text-transform: capitalize
 }
@@ -351,20 +351,20 @@ button.nav-link {
 }
 
 .footer_bg_facebook:hover {
-    color: var(--facebook)
+    color: var(--facebook) !important
 }
 
 .footer_bg_instagram:hover {
     background: #fff !important;
-    color: var(--instagram)
+    color: var(--instagram) !important
 }
 
 .footer_bg_linkedin:hover {
-    color: var(--linkedin)
+    color: var(--linkedin) !important
 }
 
 .footer_bg_youtube:hover {
-    color: var(--youtube)
+    color: var(--youtube) !important
 }
 
 .footer_bg_tiktok,
@@ -374,11 +374,11 @@ button.nav-link {
 }
 
 .footer_bg_twitter svg {
-    fill: white
+    fill: white !important
 }
 
 .footer_bg_twitter:hover.footer_bg_twitter svg {
-    fill: black
+    fill: black !important
 }
 
 .footer_bg_tiktok:hover {
@@ -519,11 +519,11 @@ a {
     margin: 3rem auto
 }
 
-.footer_icons_link {
+a.footer_icons_link {
     height: 35px;
     width: 35px;
     background: #ffffff00 !important;
-    color: #fff;
+    color: #fff !important;
     border: 2px solid #fff !important
 }
 
