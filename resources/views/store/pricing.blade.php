@@ -75,7 +75,7 @@
                             </div>
                             <div class="col-12 col-lg-6 col-md-12 col-sm-12 mt-lg-5 py-2 justify-content-center d-flex">
                                 <div class="fixed_header_media_width mx-auto">
-                                    <img src="{{ url('images/pricing_header.webp') }}" width="500" height="500" alt="a small kid standing with bag" class="learning-image">
+                                    <img src="{{ url('images/pricing_header.png') }}" width="500" height="500" alt="a small kid standing with bag" class="learning-image">
                                 </div>
                             </div>
                         </div>
@@ -91,7 +91,7 @@
     <section class="get_stared_section mb-5">
         <div class="row m-0 align-items-center">
             <div class="align-self-center text-center col-12 col-lg-5 col-md-6 col-sm-12">
-                <img src="images/discovertutor.webp" alt="discover {{ app(\App\Settings\SiteSettings::class)->app_name }}" height="100%" width="100%" class="responsive_image">
+                <img src="images/discovertutor_v2.png" alt="discover {{ app(\App\Settings\SiteSettings::class)->app_name }}" height="100%" width="100%" class="responsive_image">
             </div>
             <div class="col-lg-7 col-md-6 col-sm-12 col-12 p-3">
                 <h2 class="display-5 fw-medium mb-3">Step into smarter 11+ learning environment</h2>
@@ -106,7 +106,7 @@
         <div class="row align-items-center col-lg-10 col-12 mx-auto">
             <div class="col-lg-5 col-md-6 col-sm-12 col-12 my-3 pt-2 text-end justify-content-center d-flex">
                 <div class="fixed_header_media_width mx-auto">
-                    <img src="{{ url('images/pricing_contact.webp') }}" width="400" height="400" alt="cute boy with suggestions" class="learning-image img-fluid">
+                    <img src="{{ url('images/pricing_contact.png') }}" width="400" height="400" alt="cute boy with suggestions" class="learning-image img-fluid">
                 </div>
             </div>
             <div class="col-lg-7 col-md-6 col-sm-12 col-12 my-3">
