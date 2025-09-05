@@ -238,10 +238,10 @@
          <div class="heading_separator mx-auto rounded-pill mb-2"></div>
       </div>
       <div class="row m-0 align-items-center my-2 justify-content-center">
-         <div class="col-lg-4 col-md-5 col-sm-12 col-12 my-3 text-center">
-            <img src="{{url('images/why_choose_us.png')}}" width="350" height="auto" class="img-fluid" alt="a man standing with creative ideas">
+         <div class="col-lg-5 col-md-6 col-sm-12 col-12 my-3 text-center">
+            <img src="{{url('images/why_choose_us.png')}}" width="500" height="auto" class="img-fluid" alt="a man standing with creative ideas">
          </div>   
-         <div class="col-lg-8 col-md-7 col-sm-12 col-12 my-3">
+         <div class="col-lg-7 col-md-7 col-sm-12 col-12 my-3">
             <h2 class="h3">Pathway to Success</h2>
             @if ($category['name'] == 'Year 3')
                <p class="fs-5 fw-light mb-2">Starting your child in Year 3 provides them the foundations with which to develop essential skills, preparing them for a smooth 11+ journey. This earlier start fosters good study habits and cultivates a passion for reading, laying the groundwork for successful academic progression and pushing them ahead at school. As they progress through Year 3, they will not only acquire necessary skills but also build the confidence needed to navigate the challenges ahead.</p>

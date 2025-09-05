@@ -57,7 +57,7 @@
         .feature_card_one {
             height: 300px;
             border-radius: 45%;
-            background: url(images/education-image.webp) center;
+            background: url(images/education-image.jpg) center;
             background-size: cover;
             box-shadow: 4px 4px 0 0 var(--lightprimary)
         }
@@ -65,7 +65,7 @@
         .feature_card_two {
             height: 300px;
             border-radius: 20%;
-            background: url(images/student-image.webp) center;
+            background: url(images/student-image.jpg) center;
             background-size: cover;
             box-shadow: 4px 4px 0 0 var(--secondary)
         }
@@ -74,7 +74,7 @@
             height: 300px;
             border-top-left-radius: 50%;
             border-bottom-left-radius: 50%;
-            background: url(images/parent-blog.webp) center;
+            background: url(images/parent-blog.jpg) center;
             background-size: cover;
             box-shadow: 4px 4px 0 0 var(--lightprimary)
         }
@@ -83,7 +83,7 @@
             height: 300px;
             border-top-right-radius: 25%;
             border-bottom-left-radius: 25%;
-            background: url(images/blog-teacher.webp) center;
+            background: url(images/blog-teacher.jpg) center;
             background-size: cover;
             box-shadow: 4px 4px 0 0 var(--secondary)
         }
@@ -290,7 +290,7 @@
                         </div>
                         <div class="col-12 col-lg-6 col-md-12 col-sm-12 mt-lg-5 py-2">
                             <div class="fixed_header_media_width mx-auto">
-                                <img src="{{ url('images/blogs_header.webp') }}" width="500" height="500" alt="cute boy reading a paper" class="img-fluid" />
+                                <img src="{{ url('images/blogs_header.png') }}" width="500" height="500" alt="cute boy reading a paper" class="img-fluid" />
                             </div>
                         </div>
                     </div>

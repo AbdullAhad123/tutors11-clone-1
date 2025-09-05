@@ -121,7 +121,7 @@
         <div class="container-lg cont_wrapper">
             <div class="row align-items-center m-0">
                 <div class="col-lg-5 col-md-6 col-sm-12 col-12 my-2 text-center">
-                    <img src="{{ url('images/tutors11_students.webp') }}" width="400" height="400" alt="a group of happy students with bags and books in hands" class="learning-image">
+                    <img src="{{ url('images/tutors11_students.png') }}" width="400" height="400" alt="a group of happy students with bags and books in hands" class="learning-image">
                 </div>
                 <div class="col-lg-7 col-md-6 col-sm-12 col-12 my-2">
                     <h2 class='fs-6 fw-medium mb-0 text-uppercase text_primary'>Learn and Grow at Your Own Pace</h2>
