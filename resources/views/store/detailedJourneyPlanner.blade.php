@@ -17,6 +17,7 @@
     <!-- preload links  -->
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" as="style">
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" as="style" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="preload" href="{{url('Frontend_css/all.css')}}" as="style">
     <link rel="preload" href="{{url('Frontend_css/style.css')}}" as="style">
     <link rel="preconnect" href="https://googleads.g.doubleclick.net">
     <link rel="preconnect" href="https://td.doubleclick.net">
@@ -25,6 +26,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- css links  -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500&display=swap">
+    <link rel="stylesheet" href="{{url('Frontend_css/all.css')}}" />
     <link rel="stylesheet" href="{{url('Frontend_css/style.css')}}" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
@@ -32,7 +34,7 @@
     <style>
         .line_height {line-height: 1.6}
         .about_journey, .journey_subjects {height: auto;width: auto;margin: 2rem auto}
-        .journey_snapshots {height: auto;width: auto;margin: 2rem auto;background: radial-gradient(#47c36d , #1d7237)}
+        .journey_snapshots {height: auto;width: auto;margin: 2rem auto;background: radial-gradient(#fde6fb , #ffe1fc)}
         .learning_journey_mockup {
             filter: drop-shadow(-5px 5px 5px #00000060);
         }
@@ -52,14 +54,14 @@
         @if(app(\App\Settings\HomepageSettings::class)->enable_hero)
             <header class="header_section_faq">
                 <div class="d-flex align-items-center">
-                    <div class="col-lg-11 col-md-12 col-sm-12 col-12 mx-auto py-lg-5 py-md-5 py-0">
+                    <div class="container-lg cont_wrapper py-lg-5 py-md-5 py-0">
                         <div class="row align-items-center m-0 pt-5"> 
-                            <div class="align-items-center col-12 col-lg-5 col-md-10 col-sm-12 header_text_side justify-content-center mt-5 mt-lg-0 mt-md-5 mt-sm-5 my-2 p-3 py-4 py-lg-0">
+                            <div class="align-items-center col-12 col-lg-6 col-md-10 col-sm-12 header_text_side justify-content-center mt-5 mt-lg-0 mt-md-5 mt-sm-5 my-2 p-3 py-4 py-lg-0">
                                 <h1 class="display-4 fw-medium mt-4 text-white">Our Detailed <br> Journey Planner</h1>
-                                <p class="fs-5 fw-light header_heading my-2 text-white">A Personalised roadmap for students, meticulously scheduling their learning journey. It encompasses specific learning objectives, criteria, practise questions and more, ensuring a structured and effective path to academic success.</p>
-                                <a href='{{app(\App\Settings\HeroSettings::class)->cta_link}}' type="button" class="border-0 my-3 p-2 px-4 secondary_btn text-decoration-none">{{app(\App\Settings\HeroSettings::class)->cta_text}}</a>
+                                <p class="fs-5 fw-light header_heading my-2 text-white">A personalised guide for students that carefully plans their learning path. It includes clear learning goals, easy steps to follow, practice questions, and more. This helps children stay organised and move forward step by step, making their study journey simple, structured, and successful.</p>
+                                <a href='{{app(\App\Settings\HeroSettings::class)->cta_link}}' type="button" class="border-0 my-3 p-2 px-4 secondary_btn text-decoration-none rounded-pill">{{app(\App\Settings\HeroSettings::class)->cta_text}}</a>
                             </div>
-                            <div class="col-12 col-lg-7 col-md-12 col-sm-12 mt-lg-5 py-2 text-center" >
+                            <div class="col-12 col-lg-6 col-md-12 col-sm-12 mt-lg-5 py-2 text-center" >
                                 <div class="fixed_header_media_width mx-auto">
                                     <img src="{{url('images/journey_header_image.png')}}" width="500" height="auto" alt="a cute boy standing with mobile" class="learning-image">  
                                 </div>
@@ -69,19 +71,23 @@
                 </div>
             </header>
         @endif
+        <svg class="svg-image" viewBox="0 0 1920 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path fill="#A8229C" d="M 0 0 C 485.5 0 485.5 110 971 110 L 971 110 L 971 0 L 0 0 Z" stroke-width="0"></path>
+            <path fill="#A8229C" d="M 970 110 C 1445 110 1445 0 1920 0 L 1920 0 L 1920 0 L 970 0 Z" stroke-width="0"></path>
+        </svg>
     </section> 
 
-    <div class="about_journey fixed_width">
+    <div class="about_journey fixed_width pb-5">
         <div class="row m-0 align-items-center my-2 justify-content-center">
-            <div class="col-lg-8 col-md-7 col-sm-12 col-12 my-3">
+            <div class="col-lg-8 col-md-7 col-sm-12 col-12 my-3 order-md-2 order-1">
                 <div class="mb-4">
                     <h2 class="display-5 fw-medium my-2">What is Journey Planner?</h2>
                     <div class="heading_separator rounded-pill mb-2"></div>
                 </div>
                 <p class="fs-5 fw-light mb-2">Our detailed journey planner works as your personal companion for every subject. With our journey planner you can dive into interesting topics, explore detailed subtopics, and find thousands of questions in every sub-topics. This handy tool ensures you cover everything in every subject, making your learning journey both fun and effective. Join TutorsElevenplus today and make your learning journey a breeze!</p>
-                <a href='/registration' type="button" class="border-0 my-2 p-2 px-4 secondary_btn text-decoration-none">Let's Get Started</a>
+                <a href='/registration' type="button" class="border-0 my-2 p-2 px-4 text-decoration-none secondary_btn rounded-pill text-white">Let's Get Started</a>
             </div>
-            <div class="col-lg-4 col-md-5 col-sm-12 col-12 my-3 text-center">
+            <div class="col-lg-4 col-md-5 col-sm-12 col-12 my-3 text-center order-md-1 order-2">
                 <img src="{{url('images/journey_planner.png')}}" width="380" height="auto" class="img-fluid" alt="a kid using laptop for studying on tutorselevenplus">
             </div>
         </div>
@@ -91,10 +97,10 @@
         <div class="row m-0 align-items-center my-5 justify-content-center">
             <div class="col-lg-7 col-md-6 col-sm-12 col-12 my-3">
                 <div class="mb-4">
-                    <h2 class="display-5 fw-medium my-2 text-white">Learning Journey</h2>
-                    <div class="heading_separator rounded-pill mb-2"></div>
+                    <h2 class="display-5 fw-medium my-2 text-dark">Learning Journey</h2>
+                    <div class="heading_separator bg_primary rounded-pill mb-2"></div>
                 </div>
-                <p class="fs-5 fw-light mb-2 text-white">Our detailed journey planner works as your personal companion for every subject. With our journey planner you can dive into interesting topics, explore detailed subtopics, and find thousands of questions in every sub-topics. This handy tool ensures you cover everything in every subject, making your learning journey both fun and effective. Join TutorsElevenplus today and make your learning journey a breeze!</p>
+                <p class="fs-5 fw-light mb-2 text-dark">Our detailed journey planner works as your personal companion for every subject. With our journey planner you can dive into interesting topics, explore detailed subtopics, and find thousands of questions in every sub-topics. This handy tool ensures you cover everything in every subject, making your learning journey both fun and effective. Join TutorsElevenplus today and make your learning journey a breeze!</p>
             </div>
             <div class="col-lg-5 col-md-6 col-sm-12 col-12 my-3 text-center">
                 <img src="{{url('images/learning_journey_mockup.png')}}" width="480" height="auto" class="img-fluid learning_journey_mockup" alt="a mockup of tutorselevenplus journey">

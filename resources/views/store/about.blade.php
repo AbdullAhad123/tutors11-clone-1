@@ -264,16 +264,16 @@
         @include('components.home-navbar')
         <header class="about_header_section">
             <div class="d-flex align-items-center">
-                <div class="col-lg-11 col-md-12 col-sm-12 col-12 mx-auto py-lg-5 py-md-5 py-0">
+                <div class="container-lg cont_wrapper mx-auto py-lg-5 py-md-5 py-0">
                     <div class="row align-items-center m-0 pt-5">
-                        <div class="align-items-center col-12 col-lg-5 col-md-10 col-sm-12 header_text_side justify-content-center mt-5 mt-lg-0 mt-md-5 mt-sm-5 my-2 p-3 py-4 py-lg-0">
+                        <div class="align-items-center col-12 col-lg-6 col-md-10 col-sm-12 header_text_side justify-content-center mt-5 mt-lg-0 mt-md-5 mt-sm-5 my-2 p-3 py-4 py-lg-0">
                             <h1 class="display-4 fw-medium mt-4 text-white">Explore About <br> {{ app(\App\Settings\SiteSettings::class)->app_name }}</h1>
                             <p class="fs-5 fw-light header_heading my-2 text-white">{{ app(\App\Settings\SiteSettings::class)->app_name }} is a ground-breaking online platform that provides a dynamic learning experience for students preparing to excel in the 11+ exams in the United Kingdom.</p>
                             <a href="{{ app(\App\Settings\HeroSettings::class)->cta_link }}" class="border-0 d-inline-flex align-items-center my-2 p-2 px-4 secondary_btn text-decoration-none rounded-pill">Get started with us</a>
                         </div>
-                        <div class="col-12 col-lg-7 col-md-12 col-sm-12 mt-lg-5 py-2 text-center">
+                        <div class="col-12 col-lg-6 col-md-12 col-sm-12 mt-lg-5 py-2 text-center">
                             <div class="fixed_header_media_width mx-auto">
-                                <img src="{{ url('images/about-us.webp') }}" height="500" width="500" alt="{{ app(\App\Settings\SiteSettings::class)->app_name }} learning isometric" class="learning-image img-fluid">
+                                <img src="{{ url('images/discovertutor_v2.png') }}" height="auto" width="600" alt="{{ app(\App\Settings\SiteSettings::class)->app_name }} learning isometric" class="learning-image img-fluid">
                             </div>
                         </div>
                     </div>
@@ -288,7 +288,7 @@
     @if (app(\App\Settings\HomepageSettings::class)->enable_features)
     <section class="about_section fixed_width row align-items-center mx-auto col-lg-11 col-md-12">
         <div class="col-lg-4 col-md-6 col-sm-12 col-10 mx-auto text-center">
-          <img loading="lazy" src="images/about_boy_image.webp" alt="about us mockup" class="learning-image img-fluid" width="373" height="373">
+          <img loading="lazy" src="images/about_boy_image.png" alt="about us mockup" class="learning-image img-fluid" width="373" height="373">
         </div>
         <div class="col-lg-8 col-md-6 col-sm-12 col-12">
           <p class="fs_5 fw-medium mb-0 text-uppercase text_primary">What is {{ app(\App\Settings\SiteSettings::class)->app_name }}?</p>
@@ -361,7 +361,7 @@
                 </div>
             </div>
             <div class="col-lg-5 col-md-6 col-sm-12 col-12 d-flex justify-content-center"><img
-                    src="{{ url('images/parent-review.webp') }}" height="100%" width="100%" style="max-width:500px"
+                    src="{{ url('images/parent-review.png') }}" height="100%" width="100%" style="max-width:500px"
                     alt=""></div>
         </div>
     </section>
@@ -376,7 +376,7 @@
                 <div class="col-lg-3 col-md-5 col-sm-6 col-12 p-lg-2 p-md-2 p-1 mb-lg-0 mb-5">
                     <div class="services_card service_child1 p-3 py-4 rounded-5 position-relative">
                         <div class="services_image position-relative mx-auto"><img
-                                src="{{ url('images/top_quality_question_guy.webp') }}" height="220"
+                                src="{{ url('images/top_quality_question_guy.png') }}" height="220"
                                 width="220" alt="{{ app(\App\Settings\FeatureSettings::class)->feature1[0] }}"
                                 class="img-fluid"></div>
                         <div class="services-details">
@@ -390,7 +390,7 @@
                 <div class="col-lg-3 col-md-5 col-sm-6 col-12 p-lg-2 p-md-2 p-1 mb-lg-0 mb-5">
                     <div class="services_card service_child2 p-3 py-4 rounded-5 position-relative">
                         <div class="services_image position-relative mx-auto"><img
-                                src="{{ url('images/detail_analysis_guy.webp') }}" height="220" width="220"
+                                src="{{ url('images/detail_analysis_guy.png') }}" height="220" width="220"
                                 alt="{{ app(\App\Settings\FeatureSettings::class)->feature2[0] }}" class="img-fluid">
                         </div>
                         <div class="services-details">
@@ -404,7 +404,7 @@
                 <div class="col-lg-3 col-md-5 col-sm-6 col-12 p-lg-2 p-md-2 p-1 mb-lg-0 mb-5">
                     <div class="services_card service_child3 p-3 py-4 rounded-5 position-relative">
                         <div class="services_image position-relative mx-auto"><img
-                                src="{{ url('images/exam_quiz_guy.webp') }}" height="220" width="220"
+                                src="{{ url('images/exam_quiz_guy.png') }}" height="220" width="220"
                                 alt="{{ app(\App\Settings\FeatureSettings::class)->feature3[0] }}" class="img-fluid">
                         </div>
                         <div class="services-details">
@@ -418,7 +418,7 @@
                 <div class="col-lg-3 col-md-5 col-sm-6 col-12 p-lg-2 p-md-2 p-1 mb-lg-0 mb-5">
                     <div class="services_card service_child4 p-3 py-4 rounded-5 position-relative">
                         <div class="services_image position-relative mx-auto"><img
-                                src="{{ url('images/learning_videos_guy.webp') }}" height="220" width="220"
+                                src="{{ url('images/learning_videos_guy.png') }}" height="220" width="220"
                                 alt="{{ app(\App\Settings\FeatureSettings::class)->feature4[0] }}" class="img-fluid">
                         </div>
                         <div class="services-details">
@@ -435,7 +435,7 @@
     <section class="get_stared_section">
         <div class="row m-0 align-items-center">
             <div class="align-self-center text-center col-12 col-lg-5 col-md-6 col-sm-12">
-                <img src="images/discovertutor.webp" alt="discover {{ app(\App\Settings\SiteSettings::class)->app_name }}" height="100%" width="100%" class="responsive_image">
+                <img src="images/discovertutor.png" alt="discover {{ app(\App\Settings\SiteSettings::class)->app_name }}" height="100%" width="100%" class="responsive_image">
             </div>
             <div class="col-lg-7 col-md-6 col-sm-12 col-12 p-3">
                 <h2 class="display-5 fw-medium mb-3">Step into smarter 11+ learning environment</h2>
@@ -452,12 +452,11 @@
         </div>
         <div class="row align-items-center justify-content-center m-0">
             <div class="col-12 col-lg-7 col-md-12 col-sm-12">
-                <p class="fw-light fs-5">We are a friendly and experienced team with backgrounds in education, finance, and analytics. Over the years, we have helped many children prepare for the 11+ exams for both grammar and selective private schools. We are not only qualified but also caring, approachable, and passionate about helping children learn.</p>
-                <p class="fw-light fs-5">Using our experience, we have created a modern online platform that gives children the best chance to succeed. We know the 11+ journey can feel stressful for both children and parents, so our aim is to make it as smooth and stress-free as possible. We offer clear guidance and personal support at every step of the way.</p>
-                <p class="fw-light fs-5">Our step-by-step plan helps students build confidence and become strong candidates by exam day. We work closely with children and also encourage parents to be part of the journey. We believe every child has the ability to succeed, and together—teachers, parents, and students—we can make that success possible.</p>
+                <p class="fw-light fs-5">We are a friendly and experienced team with strong backgrounds in education, finance, and analytics. Over the years, we have supported many children in preparing for the 11+ exams for grammar and selective private schools. Along with being qualified, we are caring, approachable, and truly passionate about helping children learn. Using this experience, we have designed a modern online platform that gives every child the best chance to succeed. We understand that the 11+ journey can feel stressful for both children and parents, which is why our goal is to make the process smooth, simple, and stress-free.</p>
+                <p class="fw-light fs-5">Our step-by-step plan helps students build confidence and develop the skills they need to perform at their best on exam day. We work closely with children while also encouraging parents to be active partners in the journey. We believe that every child has the ability to succeed, and together—students, parents, and teachers—we can make that success possible.</p>
             </div>
             <div class="col-12 col-lg-5 col-md-7 col-sm-12 mx-auto">
-                <img src="{{ url('images/about-story.webp') }}" width="100%" height="100%" alt="{{ app(\App\Settings\SiteSettings::class)->app_name }} about">
+                <img src="{{ url('images/about-story.png') }}" width="100%" height="100%" alt="{{ app(\App\Settings\SiteSettings::class)->app_name }} about">
             </div>
         </div>
     </section>
