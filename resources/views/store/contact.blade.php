@@ -38,22 +38,26 @@
         @include('components.home-navbar')
         <header class="contact_header_section">
             <div class="d-flex align-items-center">
-                <div class="col-lg-11 col-md-12 col-sm-12 col-12 mx-auto py-lg-5 py-md-5 py-0">
+                <div class="container-lg cont_wrapper">
                     <div class="row align-items-center m-0 pt-5"> 
-                        <div class="align-items-center col-12 col-lg-5 col-md-10 col-sm-12 header_text_side justify-content-center mt-5 mt-lg-0 mt-md-5 mt-sm-5 my-2 p-3 py-4 py-lg-0">
+                        <div class="align-items-center col-12 col-lg-6 col-md-10 col-sm-12 header_text_side justify-content-center mt-5 mt-lg-0 mt-md-5 mt-sm-5 my-2 p-3 py-4 py-lg-0">
                             <h1 class="display-4 fw-medium mt-4 text-white">Contact Our <br> Support Team!</h1>
                             <p class="fs-5 fw-light header_heading my-2 text-white">Get in touch with {{ app(\App\Settings\SiteSettings::class)->app_name }} via phone, email or LiveChat. Comments or questions about how our online learning packages can support your child or your school? We'd love to hear from you!</p>
                             <a href='{{app(\App\Settings\HeroSettings::class)->cta_link}}'   class="border-0 my-2 p-2 px-4 secondary_btn text-decoration-none">{{app(\App\Settings\HeroSettings::class)->cta_text}}</a>
                         </div>
-                        <div class="col-12 col-lg-7 col-md-12 col-sm-12 mt-lg-5 py-2" >
+                        <div class="col-12 col-lg-6 col-md-12 col-sm-12 mt-lg-5 py-2" >
                             <div class="fixed_header_media_width mx-auto">
-                                <img src="{{url('images/contact_header.png')}}" width="100%" height="auto" alt="a cute boy standing with mobile" class="learning-image">  
+                                <img src="{{url('images/discovertutor_v2.png')}}" width="100%" height="auto" alt="a cute boy standing with mobile" class="learning-image">  
                             </div>
                         </div>    
                     </div>    
                 </div>
             </div>
         </header>
+        <svg class="svg-image" viewBox="0 0 1920 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path fill="#A8229C" d="M 0 0 C 485.5 0 485.5 110 971 110 L 971 110 L 971 0 L 0 0 Z" stroke-width="0"></path>
+            <path fill="#A8229C" d="M 970 110 C 1445 110 1445 0 1920 0 L 1920 0 L 1920 0 L 970 0 Z" stroke-width="0"></path>
+        </svg>
     </section>
 
     <!-- contact cards -->

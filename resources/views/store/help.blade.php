@@ -77,30 +77,26 @@
         @include('components.home-navbar')
         @if(app(\App\Settings\HomepageSettings::class)->enable_hero)
             <div class="py-5 header_section_faq ">
-                <div class="container">
+                <div class="container-lg cont_wrapper">
                     <div class="row g-5 align-items-center pt-5 m-0">
                         <div class="col-lg-6">
                             <h1 class="display-4 fw-medium mt-4 text-white">Explore Our <br> Help & Support</h1>
-                            <p class="fs-5 fw-light header_heading my-2 text-white" >Welcome to our Frequently Asked Questions. If you have any concerns or need further clarification, feel free to explore the topics below. We are here to assist you on your {{ app(\App\Settings\SiteSettings::class)->app_name }} journey!</p>
-                            <a href='/contact' class="border-0 my-3 p-2 px-4 secondary_btn text-decoration-none"  >Contact Us</a>
+                            <p class="fs-5 fw-light header_heading my-2 mb-4 text-white" >Welcome to our Frequently Asked Questions. If you have any concerns or need further clarification, feel free to explore the topics below. We are here to assist you on your {{ app(\App\Settings\SiteSettings::class)->app_name }} journey!</p>
+                            <a href='/contact' class="border-0 my-3 p-2 px-4 secondary_btn text-decoration-none rounded-pill"  >Contact Us</a>
                         </div>
-                        <div class="col-lg-6 about-img">
-                            <div class="row">
-                                <div class="col-12 text-center">
-                                    <img class="img-fluid w-75 rounded-circle bg-info p-3" src="{{url('images\faq-image2.jpg')}}" alt="">
-                                </div>
-                                <div class="col-6 text-start header-image" >
-                                    <img class="img-fluid w-100 rounded-circle bg-info p-3" src="{{url('images\faq-image3.jpg')}}" alt="">
-                                </div>
-                                <div class="col-6 text-end header-image" >
-                                    <img class="img-fluid w-100 rounded-circle bg-info p-3" src="{{url('images\faq-image1.jpg')}}" alt="">
-                                </div>
+                        <div class="col-12 col-lg-6 col-md-12 col-sm-12 mt-lg-5 py-2">
+                            <div class="fixed_header_media_width mx-auto">
+                                <img src="{{url('images/discovertutor_v2.png')}}" width="100%" height="auto" alt="a cute boy standing with mobile" class="learning-image">  
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         @endif
+        <svg class="svg-image" viewBox="0 0 1920 200" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <path fill="#A8229C" d="M 0 0 C 485.5 0 485.5 110 971 110 L 971 110 L 971 0 L 0 0 Z" stroke-width="0"></path>
+            <path fill="#A8229C" d="M 970 110 C 1445 110 1445 0 1920 0 L 1920 0 L 1920 0 L 970 0 Z" stroke-width="0"></path>
+        </svg>
     </section> 
 
     <!-- Services Code-->
